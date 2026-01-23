@@ -3,11 +3,160 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Franknobox 的主页</title>
+  <title>Kaixin Fan</title>
+
+  <style>
+    :root{
+      --bg: #0b0d10;
+      --panel: #10141a;
+      --text: #ffffff;
+      --muted: #b9c0cc;
+      --line: #232a35;
+      --maxw: 880px;
+      --radius: 14px;
+    }
+
+    html, body { height: 100%; }
+
+    body{
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "SimSun","宋体","STSong","Songti SC",serif;
+      line-height: 1.75;
+    }
+
+    a{
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,0.35);
+    }
+
+    .wrap{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 56px 18px 72px;
+    }
+
+    header{
+      padding: 22px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    h1{
+      margin: 0 0 8px;
+      font-size: 34px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .basic-info{
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    nav{
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      font-size: 14px;
+    }
+
+    section{
+      margin-top: 18px;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    section h2{
+      margin: 0;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    footer{
+      margin-top: 24px;
+      text-align: center;
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+
+    html { scroll-behavior: smooth; }
+  </style>
 </head>
+
 <body>
-  <h1>你好，我是 Kaixin Fan</h1>
-  <p>这是我的 GitHub Pages 主页：franknobox.github.io</p>
-  <p><a href="https://github.com/franknobox">我的 GitHub</a></p>
+  <div class="wrap">
+
+    <!-- 基本信息 -->
+    <header id="top">
+      <h1>Kaixin Fan</h1>
+      <div class="basic-info">
+        Shenzhen University ·
+        <a href="https://github.com/franknobox" target="_blank" rel="noreferrer">
+          github.com/franknobox
+        </a>
+      </div>
+
+      <nav>
+        <a href="#about">About me</a>
+        <a href="#news">News</a>
+        <a href="#projects">Projects & Experience</a>
+        <a href="#internships">Internships</a>
+        <a href="#education">Education</a>
+        <a href="#interests">兴趣爱好</a>
+        <a href="#contact">联系我</a>
+      </nav>
+    </header>
+
+    <!-- About me -->
+    <section id="about">
+      <h2>About me</h2>
+    </section>
+
+    <!-- News -->
+    <section id="news">
+      <h2>News</h2>
+    </section>
+
+    <!-- Projects & Experience -->
+    <section id="projects">
+      <h2>Projects & Experience</h2>
+    </section>
+
+    <!-- Internships -->
+    <section id="internships">
+      <h2>Internships</h2>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <h2>Education</h2>
+    </section>
+
+    <!-- 兴趣爱好 -->
+    <section id="interests">
+      <h2>兴趣爱好</h2>
+    </section>
+
+    <!-- 联系我 -->
+    <section id="contact">
+      <h2>联系我</h2>
+    </section>
+
+    <footer>
+      © <span id="y"></span> Kaixin Fan
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
