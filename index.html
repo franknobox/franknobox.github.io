@@ -1,100 +1,18 @@
 <!doctype html>
 <html lang="zh-CN">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kaixin Fan</title>
-
-  <style>
-    :root{
-      --bg: #0b0d10;
-      --panel: #10141a;
-      --text: #ffffff;
-      --muted: #b9c0cc;
-      --line: #232a35;
-      --maxw: 880px;
-      --radius: 14px;
-    }
-
-    html, body { height: 100%; }
-
-    body{
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: "SimSun","宋体","STSong","Songti SC",serif;
-      line-height: 1.75;
-    }
-
-    a{
-      color: var(--text);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(255,255,255,0.35);
-    }
-
-    .wrap{
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 56px 18px 72px;
-    }
-
-    header{
-      padding: 22px 20px;
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-    }
-
-    h1{
-      margin: 0 0 8px;
-      font-size: 34px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-    }
-
-    .basic-info{
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    nav{
-      margin-top: 16px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 16px;
-      font-size: 14px;
-    }
-
-    section{
-      margin-top: 18px;
-      padding: 18px 20px;
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-    }
-
-    section h2{
-      margin: 0;
-      font-size: 18px;
-      font-weight: 700;
-    }
-
-    footer{
-      margin-top: 24px;
-      text-align: center;
-      font-size: 12.5px;
-      color: var(--muted);
-    }
-
-    html { scroll-behavior: smooth; }
-  </style>
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
 <body>
   <div class="wrap">
 
-    <!-- 基本信息 -->
     <header id="top">
+      <button id="theme-toggle" class="theme-toggle" title="Toggle Theme">☀️</button>
       <h1>Kaixin Fan</h1>
       <div class="basic-info">
         Shenzhen University ·
@@ -104,50 +22,109 @@
       </div>
 
       <nav>
-        <a href="#about">About me</a>
-        <a href="#news">News</a>
-        <a href="#projects">Projects & Experience</a>
-        <a href="#internships">Internships</a>
-        <a href="#education">Education</a>
-        <a href="#interests">兴趣爱好</a>
-        <a href="#contact">联系我</a>
+        <a href="academic/index.html">学术 Academic</a>
+        <a href="ai/index.html">我与AI AI & Me</a>
+        <a href="game/index.html">我与游戏 Games & Me</a>
       </nav>
     </header>
 
-    <!-- About me -->
-    <section id="about">
-      <h2>About me</h2>
-    </section>
+    <div class="main-container">
+      <aside class="sidebar">
+        <nav>
+          <a href="#about">关于我 About me</a>
+          <a href="#news">最近 News</a>
+          <a href="#projects">项目经历 Projects</a>
+          <a href="#internships">实习经历 Internships</a>
+          <a href="#education">教育经历 Education</a>
+          <a href="#interests">兴趣爱好 Interests</a>
+          <a href="#contact">联系我 Contact</a>
+        </nav>
+      </aside>
 
-    <!-- News -->
-    <section id="news">
-      <h2>News</h2>
-    </section>
+      <main class="content">
+        <!-- About me -->
+        <section id="about">
+          <h2>关于我 About me</h2>
+          <!-- 
+            Example Content:
+            <p>你好，我是 Kaixin Fan。目前就读于深圳大学...</p>
+            <p>Hello, I am Kaixin Fan. Currently studying at...</p>
+          -->
+        </section>
 
-    <!-- Projects & Experience -->
-    <section id="projects">
-      <h2>Projects & Experience</h2>
-    </section>
+        <!-- News -->
+        <section id="news">
+          <h2>最近 News</h2>
+          <!-- 
+            Example Content:
+            <ul>
+              <li><strong>2024.02</strong> Published a paper at CVPR.</li>
+              <li><strong>2023.12</strong> Won 1st Prize in Hackathon.</li>
+            </ul>
+          -->
+        </section>
 
-    <!-- Internships -->
-    <section id="internships">
-      <h2>Internships</h2>
-    </section>
+        <!-- Education -->
+        <section id="education">
+          <h2>教育经历 Education</h2>
+          <!--
+            Example Content:
+            <div class="item">
+              <h3>深圳大学 Shenzhen University</h3>
+              <p>计算机科学与技术 Computer Science | 2021 - 2025</p>
+            </div>
+          -->
+        </section>
 
-    <!-- Education -->
-    <section id="education">
-      <h2>Education</h2>
-    </section>
+        <!-- Internships -->
+        <section id="internships">
+          <h2>实习经历 Internships</h2>
+          <!--
+            Example Content:
+            <div class="item">
+              <h3>微软亚洲研究院 MSRA</h3>
+              <p>研究实习生 Research Intern | 2023.06 - 2023.09</p>
+              <p>由于...（描述工作）</p>
+            </div>
+          -->
+        </section>
 
-    <!-- 兴趣爱好 -->
-    <section id="interests">
-      <h2>兴趣爱好</h2>
-    </section>
+        <!-- Projects & Experience -->
+        <section id="projects">
+          <h2>项目经历 Projects</h2>
+          <!--
+            Example Content:
+            <div class="project-item">
+              <h3><a href="#">Project Name</a></h3>
+              <p>A brief description of this project.</p>
+              <p>Tech Stack: Python, PyTorch, React</p>
+            </div>
+          -->
+        </section>
 
-    <!-- 联系我 -->
-    <section id="contact">
-      <h2>联系我</h2>
-    </section>
+        <!-- 兴趣爱好 -->
+        <section id="interests">
+          <h2>兴趣爱好 Interests</h2>
+          <!--
+            Example Content:
+            <ul>
+              <li>Badminton</li>
+              <li>Photography</li>
+              <li>Reading</li>
+            </ul>
+          -->
+        </section>
+
+        <!-- 联系我 -->
+        <section id="contact">
+          <h2>联系我 Contact me</h2>
+          <!--
+            Example Content:
+             <p>Email: <a href="mailto:example@email.com">example@email.com</a></p>
+          -->
+        </section>
+      </main>
+    </div>
 
     <footer>
       © <span id="y"></span> Kaixin Fan
@@ -155,8 +132,10 @@
 
   </div>
 
+  <script src="assets/js/main.js"></script>
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
 </body>
+
 </html>
