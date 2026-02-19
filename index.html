@@ -5,13 +5,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kaixin Fan</title>
-  <link rel="stylesheet" href="assets/css/main.css?v=3">
+  <link rel="stylesheet" href="assets/css/main.css?v=13">
 </head>
 
 <body>
   <div class="wrap">
 
-    <header id="top">
+    <header id="top" data-widget="widget-status">
       <button id="theme-toggle" class="theme-toggle" title="Toggle Theme">☀️</button>
 
       <div class="header-top">
@@ -51,77 +51,215 @@
 
       <main class="content">
         <!-- About me -->
-        <section id="about">
+        <section id="about" data-widget="widget-skills">
           <h2>关于我 About me</h2>
           <p>我是来自深圳大学管理学院的一名本科生。目前关注的方向包括游戏开发、AI Agent以及Vibe coding相关领域。</p>
           <p>我对多智能体工作流设计、工具化流程构建，以及将 AI 应用于创作与产品场景具有浓厚兴趣。</p>
         </section>
 
         <!-- News -->
-        <section id="news">
+        <section id="news" data-widget="widget-news">
           <h2>最近 News</h2>
-          <p><strong>2026.2</strong> 搭建个人主页网站结构。</p>
-          <p><strong>2026.2</strong> 参加2026中国大学生萌芽GameJam。</p>
-          <p><strong>2026.1</strong> 参加2026 Global GameJam。</p>
+          <p data-widget="widget-news-detail" data-date="2026.2" data-content="搭建个人主页网站结构，采用极简学术风格与响应式设计。">
+            <strong>2026.2</strong> 搭建个人主页网站结构。
+          </p>
+          <p data-widget="widget-news-detail" data-date="2026.2" data-content="参加2026中国大学生萌芽GameJam，探索新机制。">
+            <strong>2026.2</strong> 参加2026中国大学生萌芽GameJam。
+          </p>
+          <p data-widget="widget-news-detail" data-date="2026.1" data-content="参加2026 Global GameJam，48小时极限开发挑战。">
+            <strong>2026.1</strong> 参加2026 Global GameJam。
+          </p>
         </section>
 
         <!-- Education -->
-        <section id="education">
+        <section id="education" data-widget="widget-education">
           <h2>教育经历 Education</h2>
-          <div class="item">
+          <div class="item" data-widget="widget-education-detail" data-school="深圳大学 Shenzhen University"
+            data-major="管理学 Management" data-time="2023 - 2027" data-desc="主修管理学，辅修计算机科学相关课程。关注跨学科创新。">
             <h3>深圳大学 Shenzhen University</h3>
             <p>管理学 | 2023 - 2027</p>
           </div>
         </section>
 
         <!-- Internships -->
-        <section id="internships">
+        <section id="internships" data-widget="widget-internships">
           <h2>实习经历 Internships</h2>
-          <!--
-            Example Content:
-            <div class="item">
-              <h3>微软亚洲研究院 MSRA</h3>
-              <p>研究实习生 Research Intern | 2023.06 - 2023.09</p>
-              <p>由于...（描述工作）</p>
-            </div>
-          -->
+
+          <div class="item" data-widget="widget-internship-detail" data-company="月之暗面 KIMI"
+            data-role="研究实习生 Research Intern" data-time="2025.06 - 2025.09" data-desc="参与大语言模型评估与各Agent场景应用探索。">
+            <h3>月之暗面 KIMI</h3>
+            <p>研究实习生 Research Intern | 2025.06 - 2025.09</p>
+            <p>（描述工作）</p>
+          </div>
+
         </section>
 
         <!-- Projects & Experience -->
-        <section id="projects">
+        <section id="projects" data-widget="widget-projects">
           <h2>项目经历 Projects</h2>
-          <!--
-            Example Content:
-            <div class="project-item">
-              <h3><a href="#">Project Name</a></h3>
-              <p>A brief description of this project.</p>
-              <p>Tech Stack: Python, PyTorch, React</p>
-            </div>
-          -->
+
+          <div class="project-item" data-widget="widget-project-detail" data-title="Multi-Agent Collaboration Framework"
+            data-role="Lead Developer"
+            data-desc="Designed and implemented a framework for multi-agent communication and task allocation using LLMs."
+            data-stack="Python, LangChain, OpenAI API">
+            <h3>Multi-Agent Collaboration Framework</h3>
+            <p>基于大语言模型的多智能体协作框架，探索智能体间的通信与任务分发机制。</p>
+          </div>
+
+          <div class="project-item" data-widget="widget-project-detail"
+            data-title="Procedural Content Generation in Unity" data-role="Solo Developer"
+            data-desc="Research on procedural generation algorithms (WFC) for creating infinite game environments."
+            data-stack="Unity, C#, PCG Algorithms">
+            <h3>Procedural Content Generation (PCG)</h3>
+            <p>Unity中的程序化内容生成算法研究，实现基于波函数坍缩 (WFC) 的无限地形生成。</p>
+          </div>
         </section>
 
         <!-- 兴趣爱好 -->
-        <section id="interests">
+        <section id="interests" data-widget="widget-interests">
           <h2>兴趣爱好 Interests</h2>
-          <!--
-            Example Content:
-            <ul>
-              <li>Badminton</li>
-              <li>Photography</li>
-              <li>Reading</li>
-            </ul>
-          -->
+
+          <ul>
+            <li data-widget="widget-interest-detail" data-name="电子游戏 Games" data-desc="热衷于独立游戏开发与机制探索。">电子游戏</li>
+            <li data-widget="widget-interest-detail" data-name="篮球 Basketball" data-desc="校队成员，享受团队竞技的乐趣。">篮球</li>
+            <li data-widget="widget-interest-detail" data-name="音乐 Music" data-desc="吉他爱好者，喜欢指弹风格。">音乐</li>
+          </ul>
+
         </section>
 
         <!-- 联系我 -->
-        <section id="contact">
+        <section id="contact" data-widget="widget-contact">
           <h2>联系我 Contact me</h2>
-          <!--
-            Example Content:
-             <p>Email: <a href="mailto:example@email.com">example@email.com</a></p>
-          -->
+
+          <p>Wechat: <a href="">Frank70109</a></p>
+
         </section>
       </main>
+
+      <aside class="sidebar-right">
+        <!-- Default Status Widget -->
+        <div class="widget widget-visible" id="widget-status">
+          <div class="widget-title">Status</div>
+          <div class="widget-body">
+            <p>✨ Looking for Internship</p>
+            <p>📍 Shenzhen, China</p>
+          </div>
+          <div class="widget-cta">
+            <a href="#contact">Contact Me -></a>
+          </div>
+        </div>
+
+        <!-- Section Widgets -->
+        <div class="widget widget-hidden" id="widget-skills">
+          <div class="widget-title">Tech Stack</div>
+          <div class="widget-body tags">
+            <span>Unity</span>
+            <span>C#</span>
+            <span>Python</span>
+            <span>AI Agents</span>
+            <span>HTML/CSS</span>
+          </div>
+        </div>
+
+        <div class="widget widget-hidden" id="widget-news">
+          <div class="widget-title">News Overview</div>
+          <div class="widget-summary">Updates</div>
+          <div class="widget-body">
+            <p>Recent activities and achievements.</p>
+          </div>
+        </div>
+
+        <div class="widget widget-hidden" id="widget-education">
+          <div class="widget-title">Education</div>
+          <div class="widget-summary">Academic Background</div>
+          <div class="widget-body">
+            <p>Shenzhen University (SZU)</p>
+          </div>
+        </div>
+
+        <div class="widget widget-hidden" id="widget-internships">
+          <div class="widget-title">Experience</div>
+          <div class="widget-summary">Internships</div>
+          <div class="widget-body">
+            <p>Professional work experience.</p>
+          </div>
+        </div>
+
+        <div class="widget widget-hidden" id="widget-projects">
+          <div class="widget-title">Projects</div>
+          <div class="widget-summary">Portfolio</div>
+          <div class="widget-body">
+            <p>Selected works and research.</p>
+          </div>
+        </div>
+
+        <div class="widget widget-hidden" id="widget-interests">
+          <div class="widget-title">Interests</div>
+          <div class="widget-summary">Hobbies</div>
+          <div class="widget-body">
+            <p>Personal interests and life.</p>
+          </div>
+        </div>
+
+        <div class="widget widget-hidden" id="widget-contact">
+          <div class="widget-title">Contact</div>
+          <div class="widget-summary">Get in touch</div>
+          <div class="widget-body">
+            <p>Open for opportunities.</p>
+          </div>
+        </div>
+
+        <!-- Detail Widgets (Dynamic Content) -->
+        <div class="widget widget-hidden" id="widget-news-detail">
+          <div class="widget-title">News Detail</div>
+          <div class="widget-summary" id="news-date"></div>
+          <div class="widget-body">
+            <p id="news-content"></p>
+          </div>
+        </div>
+
+        <div class="widget widget-hidden" id="widget-project-detail">
+          <div class="widget-title">Project Detail</div>
+          <div class="widget-summary" id="project-role"></div>
+          <div class="widget-body">
+            <p id="project-desc"></p>
+            <div class="tags" id="project-stack"></div>
+          </div>
+          <div class="widget-cta">
+            <a href="#" id="project-link" target="_blank">View Project -></a>
+          </div>
+        </div>
+
+        <div class="widget widget-hidden" id="widget-education-detail">
+          <div class="widget-title">Education Detail</div>
+          <div class="widget-summary" id="edu-school"></div>
+          <div class="widget-body">
+            <p id="edu-major"></p>
+            <p id="edu-time"></p>
+            <p id="edu-desc"></p>
+          </div>
+        </div>
+
+        <div class="widget widget-hidden" id="widget-internship-detail">
+          <div class="widget-title">Internship Detail</div>
+          <div class="widget-summary" id="intern-company"></div>
+          <div class="widget-body">
+            <p id="intern-role"></p>
+            <p id="intern-time"></p>
+            <p id="intern-desc"></p>
+          </div>
+        </div>
+
+        <div class="widget widget-hidden" id="widget-interest-detail">
+          <div class="widget-title">Interest Detail</div>
+          <div class="widget-summary" id="interest-name"></div>
+          <div class="widget-body">
+            <p id="interest-desc"></p>
+          </div>
+        </div>
+      </aside>
+
+
     </div>
 
     <footer>
@@ -130,7 +268,7 @@
 
   </div>
 
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v=1"></script>
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
