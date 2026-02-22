@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI & Me - Kaixin Fan</title>
-    <link rel="stylesheet" href="../assets/css/main.css?v=26">
+    <link rel="stylesheet" href="../assets/css/main.css?v=27">
 </head>
 
 <body>
@@ -165,7 +165,7 @@
 
             <!-- Right Sidebar: AI Toolkit -->
             <aside class="sidebar-right-static">
-                <div class="toolkit-header">AI Toolkit</div>
+                <div class="toolkit-header">工具栏 Toolkit</div>
 
                 <!-- Group 1: 对话与思考 -->
                 <div class="tool-group">
@@ -174,12 +174,24 @@
                     <div class="tool-item" data-tool-id="chatgpt">
                         <span class="tool-logo">🤖</span>
                         <div class="tool-info">
-                            <div class="tool-name">ChatGPT <span class="tool-proficiency daily">日常使用</span></div>
+                            <div class="tool-name">ChatGPT <span class="tool-proficiency deep">深度使用</span></div>
                             <div class="tool-desc">日常问答与写作的主力工具，擅长头脑风暴和快速原型设计。</div>
                             <div class="tool-tags">
                                 <span class="tool-tag">写作</span>
                                 <span class="tool-tag">调研</span>
                                 <span class="tool-tag">头脑风暴</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tool-item" data-tool-id="gemini">
+                        <span class="tool-logo">✦</span>
+                        <div class="tool-info">
+                            <div class="tool-name">Gemini <span class="tool-proficiency deep">深度使用</span></div>
+                            <div class="tool-desc">多模态能力强，配合 Vibe Coding 构建本站的核心搭档。</div>
+                            <div class="tool-tags">
+                                <span class="tool-tag">编码</span>
+                                <span class="tool-tag">多模态</span>
                             </div>
                         </div>
                     </div>
@@ -196,14 +208,73 @@
                         </div>
                     </div>
 
-                    <div class="tool-item" data-tool-id="gemini">
-                        <span class="tool-logo">✦</span>
+                    <div class="tool-item" data-tool-id="doubao">
+                        <span class="tool-logo">&#x1FAD8;</span>
                         <div class="tool-info">
-                            <div class="tool-name">Gemini <span class="tool-proficiency deep">深度使用</span></div>
-                            <div class="tool-desc">多模态能力强，配合 Vibe Coding 构建本站的核心搭档。</div>
+                            <div class="tool-name">豆包 <span class="tool-proficiency exploring">探索中</span></div>
+                            <div class="tool-desc">字节跳动推出的 AI 助手，集成搜索和多模态能力，适合日常使用。</div>
                             <div class="tool-tags">
-                                <span class="tool-tag">编码</span>
+                                <span class="tool-tag">日常助手</span>
+                                <span class="tool-tag">搜索</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tool-item" data-tool-id="yuanbao">
+                        <span class="tool-logo">&#x1F48E;</span>
+                        <div class="tool-info">
+                            <div class="tool-name">腾讯元宝 <span class="tool-proficiency used">曾常用</span></div>
+                            <div class="tool-desc">腾讯混元大模型驱动，结合微信生态，日常问答体验流畅。</div>
+                            <div class="tool-tags">
+                                <span class="tool-tag">日常问答</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tool-item" data-tool-id="zhipu">
+                        <span class="tool-logo">&#x1F4D8;</span>
+                        <div class="tool-info">
+                            <div class="tool-name">智谱清言 <span class="tool-proficiency used">曾常用</span></div>
+                            <div class="tool-desc">智谱 AI 的 GLM 系列模型，学术背景深厚，中文对话质量高。</div>
+                            <div class="tool-tags">
+                                <span class="tool-tag">学术</span>
+                                <span class="tool-tag">中文对话</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tool-item" data-tool-id="grok">
+                        <span class="tool-logo">⚡</span>
+                        <div class="tool-info">
+                            <div class="tool-name">Grok <span class="tool-proficiency tried">曾试用</span></div>
+                            <div class="tool-desc">xAI 推出的对话模型，风格直接，擅长实时信息获取和创意对话。</div>
+                            <div class="tool-tags">
+                                <span class="tool-tag">实时信息</span>
+                                <span class="tool-tag">创意</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tool-item" data-tool-id="qwen">
+                        <span class="tool-logo">&#x1F52E;</span>
+                        <div class="tool-info">
+                            <div class="tool-name">通义千问 <span class="tool-proficiency tried">曾试用</span></div>
+                            <div class="tool-desc">阿里通义大模型，中文能力优秀，支持多模态理解和生成。</div>
+                            <div class="tool-tags">
+                                <span class="tool-tag">中文理解</span>
                                 <span class="tool-tag">多模态</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tool-item" data-tool-id="deepseek">
+                        <span class="tool-logo">🐋</span>
+                        <div class="tool-info">
+                            <div class="tool-name">DeepSeek <span class="tool-proficiency tried">曾试用</span></div>
+                            <div class="tool-desc">开源大模型新势力，推理能力突出，性价比极高。</div>
+                            <div class="tool-tags">
+                                <span class="tool-tag">推理</span>
+                                <span class="tool-tag">开源</span>
                             </div>
                         </div>
                     </div>

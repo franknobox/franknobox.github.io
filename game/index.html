@@ -4,39 +4,325 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>我与游戏</title>
-    <link rel="stylesheet" href="../assets/css/main.css?v=3">
+    <title>Games & Me - Kaixin Fan</title>
+    <link rel="stylesheet" href="../assets/css/main.css?v=20">
 </head>
 
 <body>
     <div class="wrap">
+
         <header>
             <button id="theme-toggle" class="theme-toggle" title="Toggle Theme">☀️</button>
             <h1>Games & Me</h1>
+            <p class="subtitle">游戏玩家与游戏开发者的双重视角，记录我与游戏的故事。</p>
         </header>
+
+        <!-- Section 1: Gaming Journey Timeline -->
+        <section class="timeline-section" id="journey">
+            <h2>游戏历程 Gaming Journey</h2>
+            <div class="timeline-scroll">
+                <div class="timeline-track">
+
+                    <div class="timeline-node" data-popup-title="初识游戏" data-popup-desc="第一次接触电子游戏，从此打开了一个全新的世界。">
+                        <span class="timeline-icon">🎮</span>
+                        <span class="timeline-date">童年</span>
+                        <span class="timeline-title">初识游戏</span>
+                    </div>
+
+                    <div class="timeline-node" data-popup-title="独立游戏启蒙"
+                        data-popup-desc="接触到独立游戏，被小团队创造出的独特体验深深打动，萌生了自己做游戏的念头。">
+                        <span class="timeline-icon">💡</span>
+                        <span class="timeline-date">2022</span>
+                        <span class="timeline-title">独立游戏启蒙</span>
+                    </div>
+
+                    <div class="timeline-node" data-popup-title="开始学习 Unity"
+                        data-popup-desc="正式开始学习 Unity 引擎和 C# 编程，迈出游戏开发的第一步。">
+                        <span class="timeline-icon">📖</span>
+                        <span class="timeline-date">2024</span>
+                        <span class="timeline-title">学习 Unity</span>
+                    </div>
+
+                    <div class="timeline-node" data-popup-title="Global GameJam 2026"
+                        data-popup-desc="参加 Global GameJam，48 小时极限开发，完成了第一个完整的游戏作品。">
+                        <span class="timeline-icon">⚡</span>
+                        <span class="timeline-date">2026.01</span>
+                        <span class="timeline-title">Global GameJam</span>
+                    </div>
+
+                    <div class="timeline-node" data-popup-title="萌芽 GameJam 2026"
+                        data-popup-desc="参加中国大学生萌芽 GameJam，继续探索游戏设计的更多可能。">
+                        <span class="timeline-icon">🌱</span>
+                        <span class="timeline-date">2026.02</span>
+                        <span class="timeline-title">萌芽 GameJam</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
 
         <div class="main-container">
             <aside class="sidebar">
                 <nav>
                     <a href="../index.html">← 返回主页 Home</a>
+                    <a href="#journey">游戏历程 Journey</a>
+                    <a href="#games">游戏项目 Games</a>
+                    <a href="#writings">拆解与感想 Writings</a>
+                    <a href="#experiences">相关实践 Experiences</a>
                 </nav>
             </aside>
+
             <main class="content">
-                <section>
-                    <h2>Games & Me</h2>
-                    <p>Coming soon...</p>
+
+                <!-- Section 2: Game Projects -->
+                <section id="games">
+                    <h2>游戏项目 My Games</h2>
+
+                    <!-- Game Card 1 (placeholder) -->
+                    <div class="game-card">
+                        <div class="game-card-gallery">
+                            <img class="game-card-main-img"
+                                src="https://placehold.co/800x450/1a1a2e/e0e0e0?text=Game+Screenshot+1"
+                                alt="Game Screenshot">
+                            <div class="game-card-thumbs">
+                                <img class="game-card-thumb" src="https://placehold.co/128x80/1a1a2e/e0e0e0?text=1"
+                                    data-full="https://placehold.co/800x450/1a1a2e/e0e0e0?text=Game+Screenshot+1"
+                                    alt="Thumb 1">
+                                <img class="game-card-thumb" src="https://placehold.co/128x80/2a1a3e/e0e0e0?text=2"
+                                    data-full="https://placehold.co/800x450/2a1a3e/e0e0e0?text=Game+Screenshot+2"
+                                    alt="Thumb 2">
+                                <img class="game-card-thumb" src="https://placehold.co/128x80/1a2a3e/e0e0e0?text=3"
+                                    data-full="https://placehold.co/800x450/1a2a3e/e0e0e0?text=Game+Screenshot+3"
+                                    alt="Thumb 3">
+                                <img class="game-card-thumb" src="https://placehold.co/128x80/3e2a1a/e0e0e0?text=4"
+                                    data-full="https://placehold.co/800x450/3e2a1a/e0e0e0?text=Game+Screenshot+4"
+                                    alt="Thumb 4">
+                            </div>
+                        </div>
+                        <div class="game-card-info">
+                            <h3>点阵武装 Dot Arsenal</h3>
+                            <p>2D Roguelite 动作游戏，核心系统包括：</p>
+                            <ul style="font-size: 14px; line-height: 1.7; padding-left: 20px; margin: 0 0 12px 0;">
+                                <li><strong>5×5 点阵武器合成系统</strong>：基于锚点偏移算法的形状识别逻辑，支持图案平移匹配；引入"点位纯度检查"机制，通过
+                                    ScriptableObject 实现配方配置化管理，确保合成精度与扩展性。</li>
+                                <li><strong>统合武器控制框架</strong>：WeaponController 基类通过策略模式统合 Melee（碰撞体检测）与
+                                    Ranged（投射物发射）逻辑；建立"耐久度剥落-资源回收"闭环，损坏武器按比例返还 Dot 资源。</li>
+                                <li><strong>集成 Spine 的智能 AI</strong>：集成 Spine Mecanim 系统，解决 2D
+                                    骨骼动画下的发射点同步与动态翻转问题；实现具备放风筝与巡逻追击行为的状态机 AI。</li>
+                                <li><strong>程序化地牢与房间管理</strong>：DungeonManager 负责随机房间序列生成（战斗/休息）与 BGM
+                                    交叉淡入淡出过渡；RoomController 动态管理敌人波次状态与自动锁门逻辑。</li>
+                                <li><strong>协程驱动的 Buff 系统</strong>：利用 Dictionary&lt;BuffType, Coroutine&gt; 管理动态 Buff
+                                    计时器，支持多类型增益（生命/移速/伤害/资源消耗减免）的平滑应用与自动回滚。</li>
+                            </ul>
+                            <div class="game-card-tags">
+                                <span>Unity</span>
+                                <span>C#</span>
+                                <span>2D Roguelite</span>
+                                <span>Spine</span>
+                                <span>PCG</span>
+                            </div>
+                            <div class="game-card-links">
+                                <a href="#" target="_blank">🔗 GitHub</a>
+                                <a href="#" target="_blank">🎮 Play</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Game Card 2 (placeholder) -->
+                    <div class="game-card">
+                        <div class="game-card-gallery">
+                            <img class="game-card-main-img"
+                                src="https://placehold.co/800x450/1e3a2e/e0e0e0?text=GameJam+Project"
+                                alt="Game Screenshot">
+                            <div class="game-card-thumbs">
+                                <img class="game-card-thumb" src="https://placehold.co/128x80/1e3a2e/e0e0e0?text=1"
+                                    data-full="https://placehold.co/800x450/1e3a2e/e0e0e0?text=GameJam+Screenshot+1"
+                                    alt="Thumb 1">
+                                <img class="game-card-thumb" src="https://placehold.co/128x80/2e3a1e/e0e0e0?text=2"
+                                    data-full="https://placehold.co/800x450/2e3a1e/e0e0e0?text=GameJam+Screenshot+2"
+                                    alt="Thumb 2">
+                            </div>
+                        </div>
+                        <div class="game-card-info">
+                            <h3>Global GameJam 2026 作品（占位）</h3>
+                            <p>48 小时极限开发的 GameJam 作品，主题探索中。</p>
+                            <div class="game-card-tags">
+                                <span>Unity</span>
+                                <span>C#</span>
+                                <span>GameJam</span>
+                            </div>
+                            <div class="game-card-links">
+                                <a href="#" target="_blank">🔗 GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
                 </section>
+
+                <!-- Section 3: Writings Bookshelf -->
+                <section class="shelf-section" id="writings">
+                    <h2>拆解与感想 Writings</h2>
+                    <div class="shelf-scroll">
+                        <div class="shelf-track">
+
+                            <a class="shelf-item" href="#" target="_blank">
+                                <span class="shelf-type">🔍</span>
+                                <span class="shelf-title">游戏拆解案占位标题 1</span>
+                                <span class="shelf-meta">拆解案 · 2025</span>
+                            </a>
+
+                            <a class="shelf-item" href="#" target="_blank">
+                                <span class="shelf-type">🔍</span>
+                                <span class="shelf-title">游戏拆解案占位标题 2</span>
+                                <span class="shelf-meta">拆解案 · 2025</span>
+                            </a>
+
+                            <a class="shelf-item" href="#" target="_blank">
+                                <span class="shelf-type">✏️</span>
+                                <span class="shelf-title">某游戏体验感想占位</span>
+                                <span class="shelf-meta">感想 · 2026</span>
+                            </a>
+
+                            <a class="shelf-item" href="#" target="_blank">
+                                <span class="shelf-type">✏️</span>
+                                <span class="shelf-title">关于 Roguelike 设计的思考</span>
+                                <span class="shelf-meta">感想 · 2026</span>
+                            </a>
+
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 4: Experiences -->
+                <section id="experiences">
+                    <h2>相关实践 Experiences</h2>
+                    <div class="experience-list">
+
+                        <div class="experience-item">
+                            <span class="experience-icon">🎪</span>
+                            <div class="experience-info">
+                                <div class="experience-name">独立游戏展志愿者（占位）</div>
+                                <div class="experience-meta">协助展会现场管理与独立游戏开发者交流 · 2025</div>
+                            </div>
+                        </div>
+
+                        <div class="experience-item">
+                            <span class="experience-icon">🏕️</span>
+                            <div class="experience-info">
+                                <div class="experience-name">腾讯游戏星跃实战营（占位）</div>
+                                <div class="experience-meta">参与游戏策划与开发实训 · 2025</div>
+                            </div>
+                        </div>
+
+                        <div class="experience-item">
+                            <span class="experience-icon">⚡</span>
+                            <div class="experience-info">
+                                <div class="experience-name">Global GameJam 2026</div>
+                                <div class="experience-meta">48小时极限游戏开发挑战 · 2026.01</div>
+                            </div>
+                        </div>
+
+                        <div class="experience-item">
+                            <span class="experience-icon">🌱</span>
+                            <div class="experience-info">
+                                <div class="experience-name">中国大学生萌芽 GameJam 2026</div>
+                                <div class="experience-meta">大学生游戏开发竞赛 · 2026.02</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
             </main>
+
+            <!-- Right Sidebar: Gamer Profile -->
+            <aside class="sidebar-right-static">
+                <div class="toolkit-header">玩家档案 Gamer Profile</div>
+
+                <!-- Platforms (Bio) -->
+                <div class="gamer-section">
+                    <div class="gamer-section-title">🖥️ 游戏平台</div>
+                    <div class="gamer-tags">
+                        <span class="gamer-tag">PC</span>
+                        <span class="gamer-tag">Switch</span>
+                        <span class="gamer-tag">iOS</span>
+                    </div>
+                </div>
+
+                <!-- Genres (Bio) -->
+                <div class="gamer-section">
+                    <div class="gamer-section-title">📊 游戏偏好</div>
+                    <div class="gamer-tags">
+                        <span class="gamer-tag">Roguelike</span>
+                        <span class="gamer-tag">RPG</span>
+                        <span class="gamer-tag">Metroidvania</span>
+                        <span class="gamer-tag">叙事驱动</span>
+                        <span class="gamer-tag">独立游戏</span>
+                    </div>
+                </div>
+
+                <!-- Now Playing -->
+                <div class="gamer-section">
+                    <div class="gamer-section-title">🔥 最近在玩</div>
+                    <div class="gamer-now-item">
+                        🎮 占位游戏名 1 <span class="gamer-now-platform">· PC</span>
+                    </div>
+                    <div class="gamer-now-item">
+                        🎮 占位游戏名 2 <span class="gamer-now-platform">· Switch</span>
+                    </div>
+                </div>
+
+                <!-- All-Time Favorites -->
+                <div class="gamer-section">
+                    <div class="gamer-section-title">❤️ 最爱游戏</div>
+
+                    <div class="gamer-fav-item">
+                        <div class="gamer-fav-name">占位游戏 1</div>
+                        <div class="gamer-fav-comment">"一行短评占位"</div>
+                        <div class="gamer-fav-stars">★★★★★</div>
+                    </div>
+
+                    <div class="gamer-fav-item">
+                        <div class="gamer-fav-name">占位游戏 2</div>
+                        <div class="gamer-fav-comment">"一行短评占位"</div>
+                        <div class="gamer-fav-stars">★★★★★</div>
+                    </div>
+
+                    <div class="gamer-fav-item">
+                        <div class="gamer-fav-name">占位游戏 3</div>
+                        <div class="gamer-fav-comment">"一行短评占位"</div>
+                        <div class="gamer-fav-stars">★★★★☆</div>
+                    </div>
+
+                    <div class="gamer-fav-item">
+                        <div class="gamer-fav-name">占位游戏 4</div>
+                        <div class="gamer-fav-comment">"一行短评占位"</div>
+                        <div class="gamer-fav-stars">★★★★☆</div>
+                    </div>
+
+                    <div class="gamer-fav-item">
+                        <div class="gamer-fav-name">占位游戏 5</div>
+                        <div class="gamer-fav-comment">"一行短评占位"</div>
+                        <div class="gamer-fav-stars">★★★★☆</div>
+                    </div>
+
+                </div>
+
+            </aside>
+
         </div>
 
         <footer>
             © <span id="y"></span> Kaixin Fan
         </footer>
+
     </div>
-    <script src="../assets/js/main.js"></script>
+
+    <script src="../assets/js/game.js?v=1"></script>
     <script>
         document.getElementById("y").textContent = new Date().getFullYear();
     </script>
+
 </body>
 
 </html>

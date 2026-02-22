@@ -192,13 +192,15 @@ h1 {
 }
 
 .header-nav a {
-  border-bottom: none;
   color: var(--muted);
+  border-bottom: none;
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .header-nav a:hover {
   color: var(--accent);
-  border-bottom: 2px solid var(--accent);
+  transform: translateY(-2px);
 }
 
 
@@ -364,7 +366,7 @@ footer {
 }
 
 .widget-title {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -392,6 +394,12 @@ footer {
 .widget-body p {
   margin-bottom: 12px;
 }
+
+#widget-status .widget-body {
+  font-size: 16px;
+  font-weight: 600;
+}
+
 
 /* Tags in Widget */
 .widget .tags {
@@ -703,6 +711,7 @@ footer {
   line-height: 1.4;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   border-bottom: none;
@@ -736,11 +745,11 @@ footer {
 }
 
 .toolkit-header {
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: var(--muted);
+  color: var(--text);
   margin-bottom: 16px;
   padding-bottom: 8px;
 }
@@ -831,6 +840,16 @@ footer {
   color: #ff9800;
 }
 
+.tool-proficiency.used {
+  border-color: rgba(206, 147, 216, 0.5);
+  color: #ce93d8;
+}
+
+.tool-proficiency.tried {
+  border-color: rgba(158, 158, 158, 0.4);
+  color: #9e9e9e;
+}
+
 .tool-desc {
   font-size: 12px;
   color: var(--muted);
@@ -872,4 +891,253 @@ footer {
   .sidebar-right-static {
     display: none;
   }
+}
+
+/* ===========================
+   Game Page Styles
+   =========================== */
+
+/* --- Game Card (Project with Image Gallery) --- */
+.game-card {
+  margin-bottom: 48px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--bg);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* Gallery area */
+.game-card-gallery {
+  position: relative;
+  background: #000;
+}
+
+.game-card-main-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.game-card:hover .game-card-main-img {
+  transform: scale(1.02);
+}
+
+.game-card-thumbs {
+  display: flex;
+  gap: 4px;
+  padding: 6px;
+  background: rgba(0, 0, 0, 0.6);
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.game-card-thumbs::-webkit-scrollbar {
+  display: none;
+}
+
+.game-card-thumb {
+  width: 64px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.2s ease, outline-color 0.2s ease;
+  outline: 2px solid transparent;
+  flex-shrink: 0;
+}
+
+.game-card-thumb:hover {
+  opacity: 0.8;
+}
+
+.game-card-thumb.active {
+  opacity: 1;
+  outline-color: var(--accent);
+}
+
+/* Card info area */
+.game-card-info {
+  padding: 24px;
+}
+
+.game-card-info h3 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.game-card-info>p {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+  max-width: none;
+}
+
+.game-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.game-card-tags span {
+  font-size: 12px;
+  padding: 3px 10px;
+  background: var(--hover);
+  border-radius: 4px;
+  color: var(--text);
+  border: 1px solid var(--line);
+}
+
+.game-card-links {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.game-card-links a {
+  color: var(--accent);
+  border-bottom: none;
+  transition: opacity 0.2s;
+}
+
+.game-card-links a:hover {
+  opacity: 0.7;
+}
+
+/* --- Experience List --- */
+.experience-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  transition: transform 0.2s ease;
+}
+
+.experience-item:last-child {
+  border-bottom: none;
+}
+
+.experience-item:hover {
+  transform: translateX(4px);
+}
+
+.experience-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+  line-height: 1.4;
+}
+
+.experience-info {
+  flex: 1;
+}
+
+.experience-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.experience-meta {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* --- Gamer Profile (Right Sidebar) --- */
+.gamer-section {
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.gamer-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.gamer-section-title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+/* Platform & Genre tags */
+.gamer-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.gamer-tag {
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 4px;
+  background: var(--hover);
+  color: var(--text);
+  border: 1px solid var(--line);
+}
+
+/* Now Playing */
+.gamer-now-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.gamer-now-item .gamer-now-platform {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* Favorites */
+.gamer-fav-item {
+  padding: 8px 0;
+}
+
+.gamer-fav-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.gamer-fav-comment {
+  font-size: 12px;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 2px;
+  line-height: 1.5;
+}
+
+.gamer-fav-stars {
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 1px;
 }
