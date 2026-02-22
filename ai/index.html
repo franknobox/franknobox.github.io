@@ -4,39 +4,303 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>我与AI</title>
-    <link rel="stylesheet" href="../assets/css/main.css?v=3">
+    <title>AI & Me - Kaixin Fan</title>
+    <link rel="stylesheet" href="../assets/css/main.css?v=25">
 </head>
 
 <body>
     <div class="wrap">
+
         <header>
             <button id="theme-toggle" class="theme-toggle" title="Toggle Theme">☀️</button>
-            <h1>我与AI AI & Me</h1>
+            <h1>AI & Me</h1>
+            <p class="subtitle">探索多智能体协作、AI 辅助创作与 Vibe Coding 的实践之路。</p>
         </header>
+
+        <!-- Horizontal Timeline -->
+        <section class="timeline-section" id="journey">
+            <h2>学习历程 Learning Journey</h2>
+            <div class="timeline-scroll">
+                <div class="timeline-track">
+
+                    <div class="timeline-node" data-popup-title="初识 AI"
+                        data-popup-desc="第一次接触 ChatGPT，感受到大语言模型在日常学习和写作中的巨大潜力，开启了对 AI 的探索之旅。">
+                        <span class="timeline-icon">📖</span>
+                        <span class="timeline-date">2024.03</span>
+                        <span class="timeline-title">初识 AI</span>
+                    </div>
+
+                    <div class="timeline-node" data-popup-title="Prompt Engineering"
+                        data-popup-desc="系统学习提示词工程，探索如何通过结构化 prompt 提升模型输出质量，用于学术写作和代码辅助场景。">
+                        <span class="timeline-icon">📖</span>
+                        <span class="timeline-date">2024.09</span>
+                        <span class="timeline-title">Prompt Engineering</span>
+                    </div>
+
+                    <div class="timeline-node" data-popup-title="LangChain 学习"
+                        data-popup-desc="学习 LangChain 框架，理解 Chain / Agent / Tool 的设计模式，开始构建基于 LLM 的自动化工作流。">
+                        <span class="timeline-icon">📖</span>
+                        <span class="timeline-date">2025.03</span>
+                        <span class="timeline-title">LangChain 学习</span>
+                    </div>
+
+                    <div class="timeline-node" data-popup-title="月之暗面 KIMI 实习"
+                        data-popup-desc="在月之暗面进行研究实习，参与大语言模型评估与 Agent 场景应用探索，深入理解工业级 AI 产品开发。">
+                        <span class="timeline-icon">🏢</span>
+                        <span class="timeline-date">2025.06</span>
+                        <span class="timeline-title">KIMI 实习</span>
+                    </div>
+
+                    <div class="timeline-node" data-popup-title="Multi-Agent 协作框架"
+                        data-popup-desc="设计并实现多智能体协作框架，探索智能体间的通信、任务分发与迭代反馈机制。">
+                        <span class="timeline-icon">⚙️</span>
+                        <span class="timeline-date">2025.09</span>
+                        <span class="timeline-title">Multi-Agent 探索</span>
+                    </div>
+
+                    <div class="timeline-node" data-popup-title="Vibe Coding 实践"
+                        data-popup-desc="探索以自然语言驱动编程的 Vibe Coding 模式，结合 AI 编码助手高效构建项目，如本个人主页。">
+                        <span class="timeline-icon">✨</span>
+                        <span class="timeline-date">2026.02</span>
+                        <span class="timeline-title">Vibe Coding</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
 
         <div class="main-container">
             <aside class="sidebar">
                 <nav>
                     <a href="../index.html">← 返回主页 Home</a>
+                    <a href="#journey">学习历程 Journey</a>
+                    <a href="#readings">阅读与思考 Readings</a>
+                    <a href="#projects">项目展示 Projects</a>
                 </nav>
             </aside>
+
             <main class="content">
-                <section>
-                    <h2>AI & Me</h2>
-                    <p>Coming soon...</p>
+
+                <!-- Readings & Thoughts Bookshelf -->
+                <section class="shelf-section" id="readings">
+                    <h2>阅读与思考 Readings & Thoughts</h2>
+                    <div class="shelf-scroll">
+                        <div class="shelf-track">
+
+                            <a class="shelf-item" href="#" target="_blank">
+                                <span class="shelf-type">📄</span>
+                                <span class="shelf-title">Attention Is All You Need</span>
+                                <span class="shelf-meta">论文 · 2017</span>
+                            </a>
+
+                            <a class="shelf-item" href="#" target="_blank">
+                                <span class="shelf-type">📄</span>
+                                <span class="shelf-title">ReAct: Synergizing Reasoning and Acting in LLMs</span>
+                                <span class="shelf-meta">论文 · 2023</span>
+                            </a>
+
+                            <a class="shelf-item" href="#" target="_blank">
+                                <span class="shelf-type">✏️</span>
+                                <span class="shelf-title">我对 Multi-Agent 工作流的一些思考</span>
+                                <span class="shelf-meta">个人文章 · 2025.10</span>
+                            </a>
+
+                            <a class="shelf-item" href="#" target="_blank">
+                                <span class="shelf-type">🎬</span>
+                                <span class="shelf-title">Andrej Karpathy: Intro to LLMs</span>
+                                <span class="shelf-meta">视频 · YouTube</span>
+                            </a>
+
+                            <a class="shelf-item" href="#" target="_blank">
+                                <span class="shelf-type">📦</span>
+                                <span class="shelf-title">LangGraph</span>
+                                <span class="shelf-meta">GitHub Repo</span>
+                            </a>
+
+                            <a class="shelf-item" href="#" target="_blank">
+                                <span class="shelf-type">✏️</span>
+                                <span class="shelf-title">Vibe Coding 是编程的未来吗？</span>
+                                <span class="shelf-meta">个人文章 · 2026.02</span>
+                            </a>
+
+                            <a class="shelf-item" href="#" target="_blank">
+                                <span class="shelf-type">📄</span>
+                                <span class="shelf-title">Generative Agents: Interactive Simulacra</span>
+                                <span class="shelf-meta">论文 · 2023</span>
+                            </a>
+
+                        </div>
+                    </div>
                 </section>
+
+                <!-- Projects -->
+                <section id="projects">
+                    <h2>项目展示 Projects</h2>
+
+                    <div class="project-item">
+                        <h3>Multi-Agent Collaboration Framework</h3>
+                        <p>基于大语言模型的多智能体协作框架。设计了 Orchestrator + 专业子 Agent 的架构，
+                            实现智能体间的通信、任务分发与迭代反馈评审机制。</p>
+                        <p style="color: var(--muted); font-size: 14px;">Python · LangChain · OpenAI API</p>
+                    </div>
+
+                    <div class="project-item">
+                        <h3>AI-Powered Personal Website</h3>
+                        <p>使用 Vibe Coding 模式构建的个人主页。通过自然语言与 AI 编码助手协作，
+                            快速迭代设计与实现，探索人机协同编程的最佳实践。</p>
+                        <p style="color: var(--muted); font-size: 14px;">HTML · CSS · JavaScript · AI Pair Programming
+                        </p>
+                    </div>
+
+                    <div class="project-item">
+                        <h3>LLM Evaluation Pipeline（占位）</h3>
+                        <p>大语言模型评估流水线，涵盖多维度评测指标设计、自动化测试脚本编写及评测结果可视化。</p>
+                        <p style="color: var(--muted); font-size: 14px;">Python · Evaluation Metrics · Data
+                            Visualization</p>
+                    </div>
+
+                </section>
+
             </main>
+
+            <!-- Right Sidebar: AI Toolkit -->
+            <aside class="sidebar-right-static">
+                <div class="toolkit-header">AI Toolkit</div>
+
+                <!-- Group 1: 对话与思考 -->
+                <div class="tool-group">
+                    <div class="tool-group-title">💬 对话与思考</div>
+
+                    <div class="tool-item" data-tool-id="chatgpt">
+                        <img class="tool-logo" src="../assets/images/tools/openai.svg" alt="ChatGPT">
+                        <div class="tool-info">
+                            <div class="tool-name">ChatGPT <span class="tool-proficiency daily">日常使用</span></div>
+                            <div class="tool-desc">日常问答与写作的主力工具，擅长头脑风暴和快速原型设计。</div>
+                            <div class="tool-tags">
+                                <span class="tool-tag">写作</span>
+                                <span class="tool-tag">调研</span>
+                                <span class="tool-tag">头脑风暴</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tool-item" data-tool-id="kimi">
+                        <img class="tool-logo" src="../assets/images/tools/kimi.svg" alt="Kimi">
+                        <div class="tool-info">
+                            <div class="tool-name">Kimi <span class="tool-proficiency daily">日常使用</span></div>
+                            <div class="tool-desc">超长上下文处理能力突出，适合论文阅读和长文档分析。</div>
+                            <div class="tool-tags">
+                                <span class="tool-tag">论文阅读</span>
+                                <span class="tool-tag">长文分析</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tool-item" data-tool-id="gemini">
+                        <img class="tool-logo" src="../assets/images/tools/gemini.svg" alt="Gemini">
+                        <div class="tool-info">
+                            <div class="tool-name">Gemini <span class="tool-proficiency deep">深度使用</span></div>
+                            <div class="tool-desc">多模态能力强，配合 Vibe Coding 构建本站的核心搭档。</div>
+                            <div class="tool-tags">
+                                <span class="tool-tag">编码</span>
+                                <span class="tool-tag">多模态</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group 2: 编码与构建 -->
+                <div class="tool-group">
+                    <div class="tool-group-title">💻 编码与构建</div>
+
+                    <div class="tool-item" data-tool-id="cursor">
+                        <img class="tool-logo" src="../assets/images/tools/cursor.svg" alt="Cursor">
+                        <div class="tool-info">
+                            <div class="tool-name">Cursor <span class="tool-proficiency daily">日常使用</span></div>
+                            <div class="tool-desc">代码辅助编写的核心工具，支持上下文感知的智能补全与重构。</div>
+                            <div class="tool-tags">
+                                <span class="tool-tag">编码</span>
+                                <span class="tool-tag">重构</span>
+                                <span class="tool-tag">调试</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tool-item" data-tool-id="copilot">
+                        <img class="tool-logo" src="../assets/images/tools/copilot.svg" alt="GitHub Copilot">
+                        <div class="tool-info">
+                            <div class="tool-name">Copilot <span class="tool-proficiency exploring">探索中</span></div>
+                            <div class="tool-desc">嵌入 IDE 的编码助手，对常规代码模式的补全非常高效。</div>
+                            <div class="tool-tags">
+                                <span class="tool-tag">补全</span>
+                                <span class="tool-tag">代码生成</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group 3: 框架与工作流 -->
+                <div class="tool-group">
+                    <div class="tool-group-title">🔧 框架与工作流</div>
+
+                    <div class="tool-item" data-tool-id="langchain">
+                        <img class="tool-logo" src="../assets/images/tools/langchain.svg" alt="LangChain">
+                        <div class="tool-info">
+                            <div class="tool-name">LangChain <span class="tool-proficiency deep">深度使用</span></div>
+                            <div class="tool-desc">Agent 开发框架，用于构建基于 LLM 的自动化工作流和工具链。</div>
+                            <div class="tool-tags">
+                                <span class="tool-tag">Agent</span>
+                                <span class="tool-tag">工作流</span>
+                                <span class="tool-tag">RAG</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group 4: AIGC 创作 -->
+                <div class="tool-group">
+                    <div class="tool-group-title">🎨 AIGC 创作</div>
+
+                    <div class="tool-item" data-tool-id="comfyui">
+                        <img class="tool-logo" src="../assets/images/tools/comfyui.svg" alt="ComfyUI">
+                        <div class="tool-info">
+                            <div class="tool-name">ComfyUI <span class="tool-proficiency exploring">探索中</span></div>
+                            <div class="tool-desc">节点式 AI 图像生成工作流，探索文生图和图像编辑的可能性。</div>
+                            <div class="tool-tags">
+                                <span class="tool-tag">文生图</span>
+                                <span class="tool-tag">图像编辑</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tool-item" data-tool-id="suno">
+                        <img class="tool-logo" src="../assets/images/tools/suno.svg" alt="Suno">
+                        <div class="tool-info">
+                            <div class="tool-name">Suno <span class="tool-proficiency exploring">探索中</span></div>
+                            <div class="tool-desc">AI 音乐生成工具，探索文字驱动音频创作的可能性。</div>
+                            <div class="tool-tags">
+                                <span class="tool-tag">音乐生成</span>
+                                <span class="tool-tag">音效</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </aside>
+
         </div>
 
         <footer>
             © <span id="y"></span> Kaixin Fan
         </footer>
+
     </div>
-    <script src="../assets/js/main.js"></script>
+
+    <script src="../assets/js/ai.js?v=4"></script>
     <script>
         document.getElementById("y").textContent = new Date().getFullYear();
     </script>
+
 </body>
 
 </html>
