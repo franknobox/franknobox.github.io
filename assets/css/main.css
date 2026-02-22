@@ -776,21 +776,13 @@ footer {
   height: 22px;
   flex-shrink: 0;
   margin-top: 1px;
-  opacity: 0.7;
-  transition: opacity 0.2s;
-}
-
-/* Invert logos in dark mode */
-:root .tool-logo {
-  filter: invert(1);
-}
-
-[data-theme="light"] .tool-logo {
-  filter: none;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
 }
 
 .tool-item:hover .tool-logo {
-  opacity: 1;
+  transform: scale(1.15);
 }
 
 .tool-info {
