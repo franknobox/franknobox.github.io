@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // ==========================================
-    // Timeline: Floating Popup
+    // Floating Popup (Timeline & Shelf)
     // ==========================================
     const popup = document.createElement('div');
     popup.className = 'timeline-float-popup';
@@ -103,13 +103,15 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.appendChild(popup);
 
     let popupVisible = false;
-    let currentNode = null;
+    let currentTarget = null;
 
-    nodes.forEach(node => {
-        node.addEventListener('mouseenter', function () {
-            const title = this.dataset.popupTitle;
+    const hoverElements = document.querySelectorAll('.timeline-node, .shelf-item');
+
+    hoverElements.forEach(el => {
+        el.addEventListener('mouseenter', function () {
+            const title = this.dataset.popupTitle || "💡 点击进入";
             const desc = this.dataset.popupDesc;
-            if (!title) return;
+            if (!desc) return; // Only show if there's a description
 
             document.getElementById('float-title').textContent = title;
             document.getElementById('float-desc').textContent = desc;
@@ -120,23 +122,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
             popup.classList.add('visible');
             popupVisible = true;
-            currentNode = this;
+            currentTarget = this;
         });
 
-        node.addEventListener('mouseleave', function () {
+        el.addEventListener('mouseleave', function () {
             popup.classList.remove('visible');
             popupVisible = false;
-            currentNode = null;
+            currentTarget = null;
         });
     });
 
-    document.querySelector('.timeline-scroll')?.addEventListener('scroll', function () {
-        if (popupVisible && currentNode) {
-            const rect = currentNode.getBoundingClientRect();
+    // Update popup position during scroll
+    window.addEventListener('scroll', function () {
+        if (popupVisible && currentTarget) {
+            const rect = currentTarget.getBoundingClientRect();
             popup.style.left = (rect.left + rect.width / 2) + 'px';
             popup.style.top = rect.top + 'px';
         }
-    });
+    }, true);
 
     // ==========================================
     // Game Card: Thumbnail Gallery
