@@ -280,6 +280,46 @@ p[data-widget]:hover {
 /* Project Item Spacing */
 .project-item {
   margin-bottom: 32px;
+  position: relative;
+  padding-top: 2px;
+}
+
+.project-item h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  padding-right: 120px;
+  /* Prevent title from overlapping the absolute link */
+  line-height: 1.4;
+}
+
+.project-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+  padding: 4px;
+}
+
+.project-link:hover {
+  color: var(--accent);
+  transform: translateX(2px);
+  /* small arrow jump */
+}
+
+.project-img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: block;
 }
 
 /* Item with Logo Layout */
@@ -814,13 +854,20 @@ footer {
 }
 
 .toolkit-header {
+  position: sticky;
+  top: -16px;
+  background: var(--bg);
+  z-index: 10;
+  padding-top: 16px;
+  margin-top: -16px;
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--text);
-  margin-bottom: 16px;
-  padding-bottom: 8px;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
 }
 
 /* Tool group */

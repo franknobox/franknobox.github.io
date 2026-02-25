@@ -54,3 +54,25 @@
   font-family: "SimHei", "Microsoft YaHei", sans-serif;
 }
 ```
+
+---
+
+## 4. 项目展示条目 (Project Item)
+*适用于 AI 页面的项目展示部分。支持右上角外链和正文下方的图片。*
+
+```html
+<div class="project-item">
+    <!-- 右上角链接入口，不需要可删除该 a 标签 -->
+    <a href="https://github.com/YourRepo" class="project-link" target="_blank">
+        GitHub Repo <span style="font-family: monospace;">&rarr;</span>
+    </a>
+    
+    <h3>项目标题</h3>
+    <p>这里是项目的正文介绍，由于宽度较大，可以多写几段描述具体做的工作与架构。</p>
+    <p style="color: var(--muted); font-size: 14px;">使用技术栈：Stack1 · Stack2</p>
+    
+    <!-- 插入图片（可选） -->
+    <!-- <img src="../assets/images/图片文件名.png" alt="Project Screenshot" class="project-img"> -->
+</div>
+```
+
