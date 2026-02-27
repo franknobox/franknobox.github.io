@@ -167,8 +167,39 @@ h1 {
   margin-bottom: 0;
 }
 
+.info-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+}
+
+.info-icon {
+  display: inline-block;
+  width: 24px;
+  text-align: center;
+  margin-right: 8px;
+  /* This creates the gap between the icon and the text/link */
+}
+
+.info-icon .icon-github {
+  margin-right: 0;
+  margin-bottom: 0px;
+}
+
+.info-item:first-child {
+  width: 215px;
+  /* Reduced from 280px to bring the right column closer */
+  flex-shrink: 0;
+}
+
 .basic-info a {
   margin-left: 0;
+  border-bottom: none;
 }
 
 /* Header Avatar */
