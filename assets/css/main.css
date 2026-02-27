@@ -1232,6 +1232,17 @@ footer {
   color: var(--muted);
 }
 
+.gamer-now-img {
+  width: 80%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
 /* Favorites */
 .gamer-fav-item {
   padding: 8px 0;

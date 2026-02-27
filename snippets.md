@@ -76,3 +76,16 @@
 </div>
 ```
 
+---
+
+## 5. 玩家档案：最近在玩 (Now Playing Item)
+*适用于 Game 页面右侧栏的“最近在玩”列表，支持在游戏名下方插入横版小截图。*
+
+```html
+<div class="gamer-now-item">
+    🎮 游戏名称 <span class="gamer-now-platform">· 游玩平台</span>
+</div>
+<!-- 插入游戏截图（推荐 16:9 横图） -->
+<!-- <img src="../assets/images/截图文件名.png" alt="Playing" class="gamer-now-img"> -->
+```
+
