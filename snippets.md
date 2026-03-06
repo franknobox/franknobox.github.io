@@ -89,3 +89,50 @@
 <!-- <img src="../assets/images/截图文件名.png" alt="Playing" class="gamer-now-img"> -->
 ```
 
+---
+
+## 6. 工具栏折叠组与项目 (Toolkit Group & Item)
+*适用于右侧的“工具栏 Toolkit”区块，带有平滑折叠展开功能。*
+
+```html
+<!-- 一个可折叠的工具组 -->
+<div class="tool-group">
+    <div class="tool-group-title">🏷️ 分类组别名称</div>
+    <div class="tool-group-content">
+
+        <!-- 组内的单个工具项 -->
+        <div class="tool-item" data-tool-id="tool_id">
+            <span class="tool-logo">图标</span>
+            <div class="tool-info">
+                <div class="tool-name">工具名 <span class="tool-proficiency 熟练度class">熟练度</span></div>
+                <div class="tool-desc">工具的描述介绍文字。</div>
+                <div class="tool-tags">
+                    <span class="tool-tag">标签1</span>
+                    <span class="tool-tag">标签2</span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+```
+
+---
+
+## 7. 带有右侧 Logo 的经历条目 (Experience Item with Right Logo)
+*适用于首页的“实习经历 (Internships)”，让公司 Logo 居右显示。*
+
+```html
+<div class="item" data-widget="widget-internship-detail" data-company="公司名称"
+  data-role="职位名称" data-time="时间段" data-desc="详细描述文字...">
+  <div class="item-with-logo-right">
+    <div>
+      <h3>公司名称（占位）</h3>
+      <p>职位名称 | 时间段</p>
+      <p>（描述工作）</p>
+    </div>
+    <!-- 推荐使用 1:1 或接近的正方形 Logo，透明底色 -->
+    <img src="assets/images/公司logo.png" alt="Company Logo" class="company-logo">
+  </div>
+</div>
+```

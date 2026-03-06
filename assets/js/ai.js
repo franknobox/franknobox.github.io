@@ -141,4 +141,14 @@ document.addEventListener("DOMContentLoaded", function () {
       popup.style.top = rect.top + 'px';
     }
   }, true);
+  // ==========================================
+  // Toolkit Collapsible Groups
+  // ==========================================
+  const toolGroupTitles = document.querySelectorAll('.tool-group-title');
+  toolGroupTitles.forEach(title => {
+    title.addEventListener('click', () => {
+      const group = title.closest('.tool-group');
+      group.classList.toggle('expanded');
+    });
+  });
 });

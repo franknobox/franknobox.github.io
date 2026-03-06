@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // ==========================================
     // Smooth Horizontal Scrolling (with inertia)
     // ==========================================
-    document.querySelectorAll('.timeline-scroll, .shelf-scroll').forEach(container => {
+    document.querySelectorAll('.timeline-scroll, .shelf-scroll, .game-tabs-container').forEach(container => {
         let targetScroll = container.scrollLeft;
         let currentScroll = container.scrollLeft;
         let animating = false;
@@ -65,6 +65,82 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
         }, { passive: false });
+    });
+
+    // ==========================================
+    // Game Projects Tab Gallery Logic
+    // ==========================================
+    const gameTabs = document.querySelectorAll('.game-tab');
+    const gameCards = document.querySelectorAll('.game-card');
+
+    // Helper function to extract average color from an image using Canvas
+    function getAverageColor(imgElement) {
+        if (!imgElement || !imgElement.complete || imgElement.naturalWidth === 0) {
+            return null; // Image not loaded yet
+        }
+
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = imgElement.naturalWidth;
+        canvas.height = imgElement.naturalHeight;
+
+        try {
+            ctx.drawImage(imgElement, 0, 0);
+            const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            const data = imageData.data;
+            let r = 0, g = 0, b = 0, count = 0;
+
+            // Sample every 4th pixel to improve performance
+            for (let i = 0; i < data.length; i += 16) {
+                // Ignore overly dark pixels to keep the glow bright
+                if (data[i] > 20 || data[i + 1] > 20 || data[i + 2] > 20) {
+                    r += data[i];
+                    g += data[i + 1];
+                    b += data[i + 2];
+                    count++;
+                }
+            }
+
+            if (count > 0) {
+                r = Math.floor(r / count);
+                g = Math.floor(g / count);
+                b = Math.floor(b / count);
+                return `rgba(${r}, ${g}, ${b}, 0.35)`; // Adding 0.35 alpha for the glow effect
+            }
+        } catch (e) {
+            // CORS issues can prevent reading canvas data if image is from another domain
+            console.warn("Could not extract average color due to CORS or other error.", e);
+        }
+        return null;
+    }
+
+    gameTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const targetId = tab.getAttribute('data-target');
+            const isActive = tab.classList.contains('active');
+            const imgEl = tab.querySelector('img');
+
+            // 1. Remove active class from all tabs and cards
+            gameTabs.forEach(t => t.classList.remove('active'));
+            gameCards.forEach(c => c.classList.remove('active'));
+
+            // 2. If it wasn't already active, activate it and its corresponding card
+            if (!isActive) {
+                tab.classList.add('active');
+                const targetCard = document.getElementById(targetId);
+
+                // Attempt to get dynamic color, fallback to data-color, fallback to default
+                let glowColor = getAverageColor(imgEl);
+                if (!glowColor) {
+                    glowColor = tab.getAttribute('data-color') || 'rgba(255, 255, 255, 0.05)';
+                }
+
+                if (targetCard) {
+                    targetCard.style.setProperty('--glow-color', glowColor);
+                    targetCard.classList.add('active');
+                }
+            }
+        });
     });
 
     // ==========================================

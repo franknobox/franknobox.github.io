@@ -74,6 +74,9 @@
         <!-- News -->
         <section id="news" data-widget="widget-news">
           <h2>最近 News</h2>
+          <p data-widget="widget-news-detail" data-date="2026.3" data-content="参加深圳理工大学AI Agent创新大赛。">
+            <strong>2026.3</strong> 参加深圳理工大学AI Agent创新大赛。
+          </p>
           <p data-widget="widget-news-detail" data-date="2026.2" data-content="搭建个人主页网站结构，采用极简学术风格与响应式设计。">
             <strong>2026.2</strong> 搭建个人主页网站。
           </p>
@@ -139,9 +142,26 @@
 
           <div class="item" data-widget="widget-internship-detail" data-company="月之暗面 KIMI"
             data-role="研究实习生 Research Intern" data-time="2025.06 - 2025.09" data-desc="参与大语言模型评估与各Agent场景应用探索。">
-            <h3>月之暗面 KIMI（占位）</h3>
-            <p>研究实习生 Research Intern | 2025.06 - 2025.09</p>
-            <p>（描述工作）</p>
+            <div class="item-with-logo-right">
+              <div>
+                <h3>月之暗面 KIMI（占位）</h3>
+                <p>研究实习生 Research Intern | 2025.06 - 2025.09</p>
+                <p>（描述工作）</p>
+              </div>
+              <img src="assets/images/moonshot.png" alt="Company Logo" class="company-logo">
+            </div>
+          </div>
+
+          <div class="item" data-widget="widget-internship-detail" data-company="Deepwisdom" data-role="实习生 Intern"
+            data-time="时间段" data-desc="深度探索与工作。">
+            <div class="item-with-logo-right">
+              <div>
+                <h3>Deepwisdom（占位）</h3>
+                <p>实习职位 | 时间段</p>
+                <p>（描述工作）</p>
+              </div>
+              <img src="assets/images/atoms.png" alt="Deepwisdom Logo" class="company-logo">
+            </div>
           </div>
 
         </section>
@@ -183,7 +203,16 @@
         <section id="contact" data-widget="widget-contact">
           <h2>联系我 Contact me</h2>
 
-          <p>Wechat: <a href="">Frank70109</a></p>
+          <p>
+            <span style="color: #07C160; margin-right: 4px; vertical-align: middle;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" height="1.2em"
+                width="1.2em" style="vertical-align: text-bottom;">
+                <path
+                  d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z" />
+              </svg>
+            </span>
+            Wechat: <a href="">Frank70109</a>
+          </p>
 
         </section>
       </main>
@@ -204,12 +233,58 @@
         <!-- Section Widgets -->
         <div class="widget widget-hidden" id="widget-skills">
           <div class="widget-title">Tech Stack</div>
-          <div class="widget-body tags">
-            <span>Unity</span>
-            <span>C#</span>
-            <span>Python</span>
-            <span>AI Agents</span>
-            <span>HTML/CSS</span>
+          <div class="widget-body">
+
+            <div class="skill-category">编程语言</div>
+            <div class="tags" style="margin-top: 0;">
+              <span>C#</span>
+              <span>Python</span>
+              <span>GDScript</span>
+              <span>Rust</span>
+              <span>HTML/CSS</span>
+            </div>
+            <hr class="skill-divider">
+
+            <div class="skill-category">游戏开发</div>
+            <div class="tags" style="margin-top: 0;">
+              <span>Unity</span>
+              <span>Godot</span>
+              <span>UE（学习中）</span>
+            </div>
+            <hr class="skill-divider">
+
+            <div class="skill-category">Agent开发</div>
+            <div class="tags" style="margin-top: 0;">
+              <span>Python</span>
+              <span>LangChain</span>
+              <span>LangGraph</span>
+              <span>CrewAI</span>
+              <span>Pydantic AI</span>
+              <span>Agno</span>
+            </div>
+            <hr class="skill-divider">
+
+            <div class="skill-category">原型设计</div>
+            <div class="tags" style="margin-top: 0;">
+              <span>Figma</span>
+              <span>Axure</span>
+              <span>墨刀</span>
+              <span>Photoshop</span>
+              <span>Canvas</span>
+            </div>
+            <hr class="skill-divider">
+
+            <div class="skill-category">数据分析</div>
+            <div class="tags" style="margin-top: 0;">
+              <span>Pandas</span>
+              <span>Numpy</span>
+              <span>Matplotlib</span>
+              <span>SQL</span>
+              <span>SPSS</span>
+              <span>R</span>
+              <span>Excel</span>
+            </div>
+
           </div>
         </div>
 

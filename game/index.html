@@ -78,81 +78,203 @@
                 <section id="games">
                     <h2>游戏项目 My Games</h2>
 
-                    <!-- Game Card 1 (placeholder) -->
-                    <div class="game-card">
-                        <div class="game-card-gallery">
-                            <img class="game-card-main-img"
-                                src="https://placehold.co/800x450/1a1a2e/e0e0e0?text=Game+Screenshot+1"
-                                alt="Game Screenshot">
-                            <div class="game-card-thumbs">
-                                <img class="game-card-thumb" src="https://placehold.co/128x80/1a1a2e/e0e0e0?text=1"
-                                    data-full="https://placehold.co/800x450/1a1a2e/e0e0e0?text=Game+Screenshot+1"
-                                    alt="Thumb 1">
-                                <img class="game-card-thumb" src="https://placehold.co/128x80/2a1a3e/e0e0e0?text=2"
-                                    data-full="https://placehold.co/800x450/2a1a3e/e0e0e0?text=Game+Screenshot+2"
-                                    alt="Thumb 2">
-                                <img class="game-card-thumb" src="https://placehold.co/128x80/1a2a3e/e0e0e0?text=3"
-                                    data-full="https://placehold.co/800x450/1a2a3e/e0e0e0?text=Game+Screenshot+3"
-                                    alt="Thumb 3">
-                                <img class="game-card-thumb" src="https://placehold.co/128x80/3e2a1a/e0e0e0?text=4"
-                                    data-full="https://placehold.co/800x450/3e2a1a/e0e0e0?text=Game+Screenshot+4"
-                                    alt="Thumb 4">
+                    <!-- Horizontal Tabs Gallery -->
+                    <div class="game-tabs-container">
+                        <!-- Tab 1 -->
+                        <div class="game-tab" data-target="game-1" data-color="rgba(100, 100, 255, 0.3)">
+                            <!-- 【替换处：游戏上方横排小封面图 (建议尺寸 800x450，比例 16:9)】 -->
+                            <img src="../assets/images/dotArsenal.png"
+                                alt="Dot Arsenal Cover">
+                            <div class="game-tab-meta">
+                                <h4>点阵武装 Dot Arsenal</h4>
+                                <span class="game-tab-type">2D Roguelite</span>
+                                <span class="game-tab-context">个人独立开发项目 (2025)</span>
                             </div>
                         </div>
-                        <div class="game-card-info">
-                            <h3>点阵武装 Dot Arsenal</h3>
-                            <p>2D Roguelite 动作游戏，核心系统包括：</p>
-                            <ul style="font-size: 14px; line-height: 1.7; padding-left: 20px; margin: 0 0 12px 0;">
-                                <li><strong>5×5 点阵武器合成系统</strong>：基于锚点偏移算法的形状识别逻辑，支持图案平移匹配；引入"点位纯度检查"机制，通过
-                                    ScriptableObject 实现配方配置化管理，确保合成精度与扩展性。</li>
-                                <li><strong>统合武器控制框架</strong>：WeaponController 基类通过策略模式统合 Melee（碰撞体检测）与
-                                    Ranged（投射物发射）逻辑；建立"耐久度剥落-资源回收"闭环，损坏武器按比例返还 Dot 资源。</li>
-                                <li><strong>集成 Spine 的智能 AI</strong>：集成 Spine Mecanim 系统，解决 2D
-                                    骨骼动画下的发射点同步与动态翻转问题；实现具备放风筝与巡逻追击行为的状态机 AI。</li>
-                                <li><strong>程序化地牢与房间管理</strong>：DungeonManager 负责随机房间序列生成（战斗/休息）与 BGM
-                                    交叉淡入淡出过渡；RoomController 动态管理敌人波次状态与自动锁门逻辑。</li>
-                                <li><strong>协程驱动的 Buff 系统</strong>：利用 Dictionary&lt;BuffType, Coroutine&gt; 管理动态 Buff
-                                    计时器，支持多类型增益（生命/移速/伤害/资源消耗减免）的平滑应用与自动回滚。</li>
-                            </ul>
-                            <div class="game-card-tags">
-                                <span>Unity</span>
-                                <span>C#</span>
-                                <span>2D Roguelite</span>
-                                <span>Spine</span>
-                                <span>PCG</span>
+
+                        <!-- Tab 2 -->
+                        <div class="game-tab" data-target="game-2" data-color="rgba(74, 222, 128, 0.3)">
+                            <!-- 【替换处：游戏上方横排小封面图 (建议尺寸 800x450，比例 16:9)】 -->
+                            <img src="../assets/images/dotlife.jpg"
+                                alt="GameJam Cover">
+                            <div class="game-tab-meta">
+                                <h4>生活需要点缀 Dot Life</h4>
+                                <span class="game-tab-type">3D益智解谜</span>
+                                <span class="game-tab-context">萌芽GameJam 参赛作品</span>
                             </div>
-                            <div class="game-card-links">
-                                <a href="#" target="_blank">🔗 GitHub</a>
-                                <a href="#" target="_blank">🎮 Play</a>
+                        </div>
+
+                        <!-- Tab 3 -->
+                        <div class="game-tab" data-target="game-3" data-color="rgba(217, 70, 239, 0.3)">
+                            <!-- 【替换处：游戏上方横排小封面图 (建议尺寸 800x450，比例 16:9)】 -->
+                            <img src="../assets/images/mask.png"
+                                alt="Project 3 Cover">
+                            <div class="game-tab-meta">
+                                <h4>游戏项目占位 3</h4>
+                                <span class="game-tab-type">2D能力锁轻战斗闯关</span>
+                                <span class="game-tab-context">2026 GGJ 作品</span>
+                            </div>
+                        </div>
+
+                        <!-- Tab 4 -->
+                        <div class="game-tab" data-target="game-4" data-color="rgba(251, 146, 60, 0.3)">
+                            <!-- 【替换处：游戏上方横排小封面图 (建议尺寸 800x450，比例 16:9)】 -->
+                            <img src="../assets/images/flashmemory.png"
+                                alt="Project 4 Cover">
+                            <div class="game-tab-meta">
+                                <h4>闪忆 Flash Memory</h4>
+                                <span class="game-tab-type">Puzzle</span>
+                                <span class="game-tab-context">校内GameJam作品</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Game Card 2 (placeholder) -->
-                    <div class="game-card">
-                        <div class="game-card-gallery">
-                            <img class="game-card-main-img"
-                                src="https://placehold.co/800x450/1e3a2e/e0e0e0?text=GameJam+Project"
-                                alt="Game Screenshot">
-                            <div class="game-card-thumbs">
-                                <img class="game-card-thumb" src="https://placehold.co/128x80/1e3a2e/e0e0e0?text=1"
-                                    data-full="https://placehold.co/800x450/1e3a2e/e0e0e0?text=GameJam+Screenshot+1"
-                                    alt="Thumb 1">
-                                <img class="game-card-thumb" src="https://placehold.co/128x80/2e3a1e/e0e0e0?text=2"
-                                    data-full="https://placehold.co/800x450/2e3a1e/e0e0e0?text=GameJam+Screenshot+2"
-                                    alt="Thumb 2">
+                    <!-- Detailed Game Cards Wrapper -->
+                    <div class="game-cards-wrapper">
+                        <!-- Game Card 1 -->
+                        <div class="game-card" id="game-1">
+                            <div class="game-card-gallery">
+                                <!-- 【替换处：大卡片顶部主展示图 (建议尺寸 800x450，比例 16:9)】 -->
+                                <img class="game-card-main-img"
+                                    src="https://placehold.co/800x450/1a1a2e/e0e0e0?text=Game+Screenshot+1"
+                                    alt="Game Screenshot">
+                                <div class="game-card-thumbs">
+                                    <!-- 【替换处：大卡片附带的缩略图 (src 为小图尺寸，data-full 为点击后主图显示的大图路径)】 -->
+                                    <img class="game-card-thumb" src="https://placehold.co/128x80/1a1a2e/e0e0e0?text=1"
+                                        data-full="https://placehold.co/800x450/1a1a2e/e0e0e0?text=Game+Screenshot+1"
+                                        alt="Thumb 1">
+                                    <img class="game-card-thumb" src="https://placehold.co/128x80/2a1a3e/e0e0e0?text=2"
+                                        data-full="https://placehold.co/800x450/2a1a3e/e0e0e0?text=Game+Screenshot+2"
+                                        alt="Thumb 2">
+                                    <img class="game-card-thumb" src="https://placehold.co/128x80/1a2a3e/e0e0e0?text=3"
+                                        data-full="https://placehold.co/800x450/1a2a3e/e0e0e0?text=Game+Screenshot+3"
+                                        alt="Thumb 3">
+                                    <img class="game-card-thumb" src="https://placehold.co/128x80/3e2a1a/e0e0e0?text=4"
+                                        data-full="https://placehold.co/800x450/3e2a1a/e0e0e0?text=Game+Screenshot+4"
+                                        alt="Thumb 4">
+                                </div>
+                            </div>
+                            <div class="game-card-info">
+                                <h3>点阵武装 Dot Arsenal</h3>
+                                <p>2D Roguelite 动作游戏，核心系统包括：</p>
+                                <ul style="font-size: 14px; line-height: 1.7; padding-left: 20px; margin: 0 0 12px 0;">
+                                    <li><strong>5×5 点阵武器合成系统</strong>：基于锚点偏移算法的形状识别逻辑，支持图案平移匹配；引入"点位纯度检查"机制，通过
+                                        ScriptableObject 实现配方配置化管理，确保合成精度与扩展性。</li>
+                                    <li><strong>统合武器控制框架</strong>：WeaponController 基类通过策略模式统合 Melee（碰撞体检测）与
+                                        Ranged（投射物发射）逻辑；建立"耐久度剥落-资源回收"闭环，损坏武器按比例返还 Dot 资源。</li>
+                                    <li><strong>集成 Spine 的智能 AI</strong>：集成 Spine Mecanim 系统，解决 2D
+                                        骨骼动画下的发射点同步与动态翻转问题；实现具备放风筝与巡逻追击行为的状态机 AI。</li>
+                                    <li><strong>程序化地牢与房间管理</strong>：DungeonManager 负责随机房间序列生成（战斗/休息）与 BGM
+                                        交叉淡入淡出过渡；RoomController 动态管理敌人波次状态与自动锁门逻辑。</li>
+                                    <li><strong>协程驱动的 Buff 系统</strong>：利用 Dictionary&lt;BuffType, Coroutine&gt; 管理动态
+                                        Buff
+                                        计时器，支持多类型增益（生命/移速/伤害/资源消耗减免）的平滑应用与自动回滚。</li>
+                                </ul>
+                                <div class="game-card-tags">
+                                    <span>Unity</span>
+                                    <span>C#</span>
+                                    <span>2D Roguelite</span>
+                                    <span>Spine</span>
+                                    <span>PCG</span>
+                                </div>
+                                <div class="game-card-links">
+                                    <a href="#" target="_blank">🔗 GitHub</a>
+                                    <a href="#" target="_blank">🎮 Play</a>
+                                </div>
                             </div>
                         </div>
-                        <div class="game-card-info">
-                            <h3>Global GameJam 2026 作品（占位）</h3>
-                            <p>48 小时极限开发的 GameJam 作品，主题探索中。</p>
-                            <div class="game-card-tags">
-                                <span>Unity</span>
-                                <span>C#</span>
-                                <span>GameJam</span>
+
+                        <!-- Game Card 2 (placeholder) -->
+                        <div class="game-card" id="game-2">
+                            <div class="game-card-gallery">
+                                <!-- 【替换处：大卡片顶部主展示图 (建议尺寸 800x450，比例 16:9)】 -->
+                                <img class="game-card-main-img"
+                                    src="https://placehold.co/800x450/1e3a2e/e0e0e0?text=GameJam+Project"
+                                    alt="Game Screenshot">
+                                <div class="game-card-thumbs">
+                                    <!-- 【替换处：大卡片附带的缩略图 (src 为小图尺寸，data-full 为点击后主图显示的大图路径)】 -->
+                                    <img class="game-card-thumb" src="https://placehold.co/128x80/1e3a2e/e0e0e0?text=1"
+                                        data-full="https://placehold.co/800x450/1e3a2e/e0e0e0?text=GameJam+Screenshot+1"
+                                        alt="Thumb 1">
+                                    <img class="game-card-thumb" src="https://placehold.co/128x80/2e3a1e/e0e0e0?text=2"
+                                        data-full="https://placehold.co/800x450/2e3a1e/e0e0e0?text=GameJam+Screenshot+2"
+                                        alt="Thumb 2">
+                                </div>
                             </div>
-                            <div class="game-card-links">
-                                <a href="#" target="_blank">🔗 GitHub</a>
+                            <div class="game-card-info">
+                                <h3>Global GameJam 2026 作品（占位）</h3>
+                                <p>3D 益智解谜游戏，核心系统包括：</p>
+                                <ul>
+                                    <li><strong>空间绘图交互</strong>：将传统 UI 绘图转化为 3D 空间内的物理位移交互。玩家需在场景中寻找并按逻辑激活，模拟在场景中绘图的感官体验。开发了序列校验状态机，进行实时路径校验；配合分帧材质动画系统，随交互进程动态映射纹理演变，提供即时的“色彩重现”视觉反馈。</li>
+                                    <li><strong>平滑的3D 3C系统设计</strong>：实现了具备指令预缓冲逻辑的网格化移动系统，支持指令链式触发，确保操作的连贯性；同步构建了带滞后效果的平滑跟随镜头，结合电影化视角切换，提升整体操作感与演出效果。</li>
+                                    <li><strong>室内桌面场景搭建与环境叙事</strong>：以“书桌”缩微世界为视角核心，运用Low-poly 风格资源构建微粒化的室内关卡，通过合理的文具与日常物件布局引导探索路径，将游戏主题与环境结构深度融合，实现高沉浸的视觉叙事。</li>
+                                    <li><strong>解耦式事件驱动架构</strong>：建立全局 TriggerBus，解耦了玩家控制、环境交互与任务进度逻辑。通过观察者模式实现复杂场景下多个“点位”触发器与全局 GameState 的低耦合协作，提升 GameJam 高质量迭代的稳定性。</li>
+                                </ul>
+                                <div class="game-card-tags">
+                                    <span>Unity</span>
+                                    <span>C#</span>
+                                    <span>GameJam</span>
+                                </div>
+                                <div class="game-card-links">
+                                    <a href="#" target="_blank">🔗 GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Game Card 3 (placeholder) -->
+                        <div class="game-card" id="game-3">
+                            <div class="game-card-gallery">
+                                <!-- 【替换处：大卡片顶部主展示图 (建议尺寸 800x450，比例 16:9)】 -->
+                                <img class="game-card-main-img"
+                                    src="https://placehold.co/800x450/2a1a3e/e0e0e0?text=Project+3"
+                                    alt="Game Screenshot">
+                                <div class="game-card-thumbs">
+                                    <!-- 【替换处：大卡片附带的缩略图 (src 为小图尺寸，data-full 为点击后主图显示的大图路径)】 -->
+                                    <img class="game-card-thumb" src="https://placehold.co/128x80/2a1a3e/e0e0e0?text=1"
+                                        data-full="https://placehold.co/800x450/2a1a3e/e0e0e0?text=Project+3+Screenshot+1"
+                                        alt="Thumb 1">
+                                    <img class="game-card-thumb" src="https://placehold.co/128x80/1a1a2e/e0e0e0?text=2"
+                                        data-full="https://placehold.co/800x450/1a1a2e/e0e0e0?text=Project+3+Screenshot+2"
+                                        alt="Thumb 2">
+                                </div>
+                            </div>
+                            <div class="game-card-info">
+                                <h3>游戏项目占位 3 详细说明</h3>
+                                <p>这里是第三个游戏项目的详细描述占位符。</p>
+                                <div class="game-card-tags">
+                                    <span>Unreal Engine</span>
+                                    <span>Blueprint</span>
+                                </div>
+                                <div class="game-card-links">
+                                    <a href="#" target="_blank">🔗 Video</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Game Card 4 (placeholder) -->
+                        <div class="game-card" id="game-4">
+                            <div class="game-card-gallery">
+                                <!-- 【替换处：大卡片顶部主展示图 (建议尺寸 800x450，比例 16:9)】 -->
+                                <img class="game-card-main-img"
+                                    src="https://placehold.co/800x450/3e2a1a/e0e0e0?text=Project+4"
+                                    alt="Game Screenshot">
+                                <div class="game-card-thumbs">
+                                    <!-- 【替换处：大卡片附带的缩略图 (src 为小图尺寸，data-full 为点击后主图显示的大图路径)】 -->
+                                    <img class="game-card-thumb" src="https://placehold.co/128x80/3e2a1a/e0e0e0?text=1"
+                                        data-full="https://placehold.co/800x450/3e2a1a/e0e0e0?text=Project+4+Screenshot+1"
+                                        alt="Thumb 1">
+                                </div>
+                            </div>
+                            <div class="game-card-info">
+                                <h3>游戏项目占位 4 详细说明</h3>
+                                <p>这里是第四个游戏项目的详细描述占位符。</p>
+                                <div class="game-card-tags">
+                                    <span>Godot</span>
+                                    <span>GDScript</span>
+                                </div>
+                                <div class="game-card-links">
+                                    <a href="#" target="_blank">🔗 Itch.io</a>
+                                </div>
                             </div>
                         </div>
                     </div>
