@@ -25,6 +25,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // Smooth Horizontal Scrolling (with inertia)
   // ==========================================
   document.querySelectorAll('.timeline-scroll, .shelf-scroll').forEach(container => {
+    // Initial scroll to end for timeline
+    if (container.classList.contains('timeline-scroll')) {
+      container.scrollLeft = container.scrollWidth;
+    }
+
     let targetScroll = container.scrollLeft;
     let currentScroll = container.scrollLeft;
     let animating = false;
