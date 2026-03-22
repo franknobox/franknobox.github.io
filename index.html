@@ -55,9 +55,9 @@
         <nav>
           <a href="#about">关于我 About me</a>
           <a href="#news">最近 News</a>
-          <a href="#projects">项目经历 Projects</a>
-          <a href="#internships">实习经历 Internships</a>
           <a href="#education">教育经历 Education</a>
+          <a href="#internships">实习经历 Internships</a>
+          <a href="#projects">项目经历 Projects</a>
           <a href="#interests">兴趣爱好 Interests</a>
           <a href="#contact">联系我 Contact</a>
         </nav>
@@ -75,18 +75,26 @@
         <!-- News -->
         <section id="news" data-widget="widget-news">
           <h2>最近 News</h2>
+          <p data-widget="widget-news-detail" data-date="2026.3" data-content="加入LoongClaw开源组织，参与项目开发。">
+            <strong>2026.3</strong> 加入LoongClaw开源组织，参与项目开发。
+          </p>
           <p data-widget="widget-news-detail" data-date="2026.3" data-content="参加深圳理工大学AI Agent创新大赛。">
             <strong>2026.3</strong> 参加深圳理工大学AI Agent创新大赛。
           </p>
           <p data-widget="widget-news-detail" data-date="2026.2" data-content="搭建个人主页网站结构，采用极简学术风格与响应式设计。">
             <strong>2026.2</strong> 搭建个人主页网站。
           </p>
-          <p data-widget="widget-news-detail" data-date="2026.2" data-content="参加2026中国大学生萌芽GameJam，探索新机制。">
-            <strong>2026.2</strong> 参加2026中国大学生萌芽GameJam。
-          </p>
-          <p data-widget="widget-news-detail" data-date="2026.1" data-content="参加2026 Global GameJam，48小时极限开发挑战。">
-            <strong>2026.1</strong> 参加2026 Global GameJam。
-          </p>
+
+          <div id="news-more-container" style="display: none;">
+            <p data-widget="widget-news-detail" data-date="2026.2" data-content="参加2026中国大学生萌芽GameJam，探索新机制。">
+              <strong>2026.2</strong> 参加2026中国大学生萌芽GameJam。
+            </p>
+            <p data-widget="widget-news-detail" data-date="2026.1" data-content="参加2026 Global GameJam，48小时极限开发挑战。">
+              <strong>2026.1</strong> 参加2026 Global GameJam。
+            </p>
+          </div>
+
+          <span id="news-more-btn" style="color: var(--muted); opacity: 0.7; font-weight: 700; cursor: pointer; font-size: 15px; display: inline-block; margin-top: -10px; margin-left: 2px; transition: all 0.2s;" onmouseover="this.style.opacity='1'; this.style.color='var(--accent)'" onmouseout="this.style.opacity='0.7'; this.style.color='var(--muted)'">more</span>
         </section>
 
         <!-- Education -->
@@ -170,6 +178,22 @@
         <!-- Projects & Experience -->
         <section id="projects" data-widget="widget-projects">
           <h2>项目经历 Projects</h2>
+
+          <div class="project-item" data-widget="widget-project-detail"
+            data-title="2025腾讯游戏星跃实战营" data-role="Minigame方向课题"
+            data-desc="参加minigame方向课题“AI助力新人策划抢占未来AI玩法话语权”，拟定方向为AI Roguelike。"
+            data-stack="AI, Roguelike, 游戏策划">
+            <h3>2025腾讯游戏星跃实战营</h3>
+            <p>参与minigame方向课题，探索AI赋能，拟定方向为 AI Roguelike。</p>
+          </div>
+
+          <div class="project-item" data-widget="widget-project-detail"
+            data-title="腾讯未来产品经理创造营" data-role="产品经理研习"
+            data-desc="研习经典产品案例，学习其在用户洞察、功能迭代及商业化变现的核心方法论。重点关注用户体验设计原则，建立了从“用户需求”到“功能定义”的产品闭环思维。掌握 Axure RP、Figma的基本功能，具备快速构建低保真原型的能力。"
+            data-stack="Axure RP, Figma, 产品思维, 用户洞察">
+            <h3>腾讯未来产品经理创造营</h3>
+            <p>研习产品案例并培养产品结构闭环思维，掌握并实践构建原型的能力。</p>
+          </div>
 
           <div class="project-item" data-widget="widget-project-detail" data-title="Multi-Agent Collaboration Framework"
             data-role="Lead Developer"

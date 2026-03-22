@@ -84,6 +84,35 @@ document.addEventListener("DOMContentLoaded", function () {
             setText('#intern-desc', trigger.dataset.desc);
         }
 
+        if (widgetId === 'widget-project-detail') {
+            const role = trigger.dataset.role ? ' - ' + trigger.dataset.role : '';
+            setText('#project-role', trigger.dataset.title + role);
+            setText('#project-desc', trigger.dataset.desc);
+            
+            const stackEl = targetWidget.querySelector('#project-stack');
+            if (stackEl) {
+                stackEl.innerHTML = '';
+                if (trigger.dataset.stack) {
+                    const tags = trigger.dataset.stack.split(',');
+                    tags.forEach(tag => {
+                        const span = document.createElement('span');
+                        span.textContent = tag.trim();
+                        stackEl.appendChild(span);
+                    });
+                }
+            }
+
+            const linkEl = targetWidget.querySelector('#project-link');
+            if (linkEl) {
+                if (trigger.dataset.link) {
+                    linkEl.href = trigger.dataset.link;
+                    linkEl.parentElement.style.display = 'block';
+                } else {
+                    linkEl.parentElement.style.display = 'none';
+                }
+            }
+        }
+
         if (widgetId === 'widget-interest-detail') {
             setText('#interest-name', trigger.dataset.name);
             setText('#interest-desc', trigger.dataset.desc);
@@ -117,4 +146,21 @@ document.addEventListener("DOMContentLoaded", function () {
             showWidget(defaultWidgetId);
         }
     });
+
+    // ==========================================
+    // News Expand/Collapse Logic
+    // ==========================================
+    const newsMoreBtn = document.getElementById("news-more-btn");
+    const newsMoreContainer = document.getElementById("news-more-container");
+    if (newsMoreBtn && newsMoreContainer) {
+        newsMoreBtn.addEventListener("click", () => {
+            if (newsMoreContainer.style.display === "none") {
+                newsMoreContainer.style.display = "block";
+                newsMoreBtn.textContent = "less";
+            } else {
+                newsMoreContainer.style.display = "none";
+                newsMoreBtn.textContent = "more";
+            }
+        });
+    }
 });
