@@ -1,3 +1,4 @@
+/* #region Variables & Theming */
 :root {
   /* Dark Mode (Default) - Unified Background */
   --bg: #0b0d10;
@@ -38,7 +39,9 @@
 [data-theme="light"] .theme-img-dark {
   display: none !important;
 }
+/* #endregion */
 
+/* #region Base Styles */
 html,
 body {
   height: 100%;
@@ -87,6 +90,7 @@ a:hover .icon-github {
   opacity: 1;
 }
 
+/* #region Layout Structure */
 /* Layout Container */
 .main-container {
   display: block;
@@ -100,8 +104,10 @@ a:hover .icon-github {
   /* Increased top padding to lower header */
   position: relative;
 }
+/* #endregion */
 
 /* Sidebar - Far Left Fixed */
+/* #region Left Sidebar */
 /* Sidebar - Far Left Fixed */
 .sidebar {
   width: 260px;
@@ -146,7 +152,9 @@ a:hover .icon-github {
   transform: translateX(8px);
   /* Slightly more movement */
 }
+/* #endregion */
 
+/* #region Header Area */
 /* Header - Simplified */
 header {
   padding: 40px 0;
@@ -250,10 +258,12 @@ h1 {
   color: var(--accent);
   transform: translateY(-2px);
 }
+/* #endregion */
 
 
 
 
+/* #region Main Content Components */
 section {
   margin: 0 0 60px 0;
   /* Significant whitespace */
@@ -413,8 +423,10 @@ p[data-widget]:hover {
 .item-with-logo-right:hover .company-logo {
   opacity: 1;
 }
+/* #endregion */
 
 
+/* #region Global UI */
 /* Theme Toggle */
 .theme-toggle {
   position: absolute;
@@ -442,7 +454,9 @@ footer {
   border-top: 1px solid var(--line);
   padding-top: 40px;
 }
+/* #endregion */
 
+/* #region Right Sidebar (Widgets) */
 /* Right Sidebar - Widget System */
 .sidebar-right {
   width: 280px;
@@ -572,7 +586,9 @@ footer {
     display: none;
   }
 }
+/* #endregion */
 
+/* #region Global Responsive */
 /* Responsive Design */
 
 @media (max-width: 1280px) {
@@ -610,7 +626,9 @@ footer {
     display: inline-block;
   }
 }
+/* #endregion */
 
+/* #region AI Page Components */
 /* ===========================
    AI Page Styles
    =========================== */
@@ -926,7 +944,9 @@ footer {
   /* Different rotation for variety */
   font-weight: 900;
 }
+/* #endregion */
 
+/* #region Right Sidebar (Toolkit) */
 /* --- Right Sidebar Static (Toolkit) --- */
 .sidebar-right-static {
   width: 280px;
@@ -1135,7 +1155,9 @@ footer {
     display: none;
   }
 }
+/* #endregion */
 
+/* #region Game Page Specific Components */
 /* ===========================
    Game Page Styles
    =========================== */
@@ -1492,3 +1514,4 @@ footer {
   color: var(--accent);
   letter-spacing: 1px;
 }
+/* #endregion */
