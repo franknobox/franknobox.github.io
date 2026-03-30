@@ -1,0 +1,175 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1040" viewBox="0 0 1800 1040">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fcfcfd"/>
+      <stop offset="100%" stop-color="#f3f6fb"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#4b5563"/>
+    </marker>
+    <style>
+      .title { font: 700 30px "Microsoft YaHei", "PingFang SC", sans-serif; fill: #18212f; }
+      .subtitle { font: 15px "Microsoft YaHei", "PingFang SC", sans-serif; fill: #5b6472; }
+      .lane-title { font: 700 18px "Microsoft YaHei", "PingFang SC", sans-serif; fill: #243142; }
+      .node-title { font: 700 17px "Microsoft YaHei", "PingFang SC", sans-serif; fill: #1f2937; }
+      .node-text { font: 14px "Microsoft YaHei", "PingFang SC", sans-serif; fill: #374151; }
+      .note { font: 13px "Microsoft YaHei", "PingFang SC", sans-serif; fill: #6b7280; }
+      .edge-label { font: 13px "Microsoft YaHei", "PingFang SC", sans-serif; fill: #4b5563; }
+      .lane { fill: #ffffff; stroke: #d9e1ec; stroke-width: 2; rx: 20; ry: 20; }
+      .lane-soft { fill: #f7f9fc; stroke: #e2e8f0; stroke-width: 1.5; rx: 16; ry: 16; }
+      .blue { fill: #e8f1ff; stroke: #7ea6e0; stroke-width: 2; rx: 16; ry: 16; }
+      .green { fill: #eaf7ec; stroke: #7fbe88; stroke-width: 2; rx: 16; ry: 16; }
+      .purple { fill: #efe8fb; stroke: #9d83d0; stroke-width: 2; rx: 16; ry: 16; }
+      .gray { fill: #f5f7fb; stroke: #98a2b3; stroke-width: 2; rx: 16; ry: 16; }
+      .yellow { fill: #fff6da; stroke: #d8b458; stroke-width: 2; }
+      .red { fill: #fdecec; stroke: #cf6d6d; stroke-width: 2; rx: 16; ry: 16; }
+      .line { fill: none; stroke: #4b5563; stroke-width: 2.5; marker-end: url(#arrow); }
+      .dashed { fill: none; stroke: #94a3b8; stroke-width: 2; stroke-dasharray: 8 7; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1800" height="1040" fill="url(#bg)"/>
+
+  <text x="900" y="54" text-anchor="middle" class="title">《崩坏：星穹铁道》战斗逻辑流程图</text>
+  <text x="900" y="84" text-anchor="middle" class="subtitle">以青雀普通普攻 / 强化普攻样本为例，按“攻击区→倍率区→增伤区→双暴区→防御区→抗性区→易伤区→减伤区”顺序结算</text>
+
+  <rect x="40" y="120" width="340" height="840" class="lane" filter="url(#shadow)"/>
+  <rect x="410" y="120" width="290" height="840" class="lane" filter="url(#shadow)"/>
+  <rect x="730" y="120" width="590" height="840" class="lane" filter="url(#shadow)"/>
+  <rect x="1350" y="120" width="410" height="840" class="lane" filter="url(#shadow)"/>
+
+  <text x="210" y="155" text-anchor="middle" class="lane-title">1. 输入与准备</text>
+  <text x="555" y="155" text-anchor="middle" class="lane-title">2. 关键判定</text>
+  <text x="1025" y="155" text-anchor="middle" class="lane-title">3. 乘区结算</text>
+  <text x="1555" y="155" text-anchor="middle" class="lane-title">4. 结果输出</text>
+
+  <rect x="80" y="190" width="260" height="68" class="blue" filter="url(#shadow)"/>
+  <text x="210" y="220" text-anchor="middle" class="node-title">攻击触发</text>
+  <text x="210" y="244" text-anchor="middle" class="node-text">角色发起普攻或强化普攻</text>
+
+  <rect x="80" y="290" width="260" height="78" class="blue" filter="url(#shadow)"/>
+  <text x="210" y="320" text-anchor="middle" class="node-title">识别技能类型</text>
+  <text x="210" y="344" text-anchor="middle" class="node-text">普通普攻 / 强化普攻</text>
+  <text x="210" y="364" text-anchor="middle" class="note">决定后续倍率区取值</text>
+
+  <rect x="80" y="400" width="260" height="96" class="green" filter="url(#shadow)"/>
+  <text x="210" y="430" text-anchor="middle" class="node-title">读取攻击方面板</text>
+  <text x="210" y="454" text-anchor="middle" class="node-text">攻击、暴击率、暴伤</text>
+  <text x="210" y="476" text-anchor="middle" class="node-text">量子增伤、抗性穿透</text>
+
+  <rect x="80" y="530" width="260" height="114" class="green" filter="url(#shadow)"/>
+  <text x="210" y="560" text-anchor="middle" class="node-title">读取目标状态</text>
+  <text x="210" y="584" text-anchor="middle" class="node-text">敌方等级、量子弱点</text>
+  <text x="210" y="606" text-anchor="middle" class="node-text">易伤 9%</text>
+  <text x="210" y="628" text-anchor="middle" class="node-text">战甲 25% / 坚防守备 50%</text>
+
+  <polygon points="555,230 650,285 555,340 460,285" class="yellow" filter="url(#shadow)"/>
+  <text x="555" y="280" text-anchor="middle" class="node-title">是否有效命中</text>
+  <text x="555" y="302" text-anchor="middle" class="node-text">免疫 / 无效目标判定</text>
+
+  <rect x="470" y="390" width="170" height="64" class="red" filter="url(#shadow)"/>
+  <text x="555" y="428" text-anchor="middle" class="node-title">无伤害结算结束</text>
+
+  <polygon points="555,540 650,595 555,650 460,595" class="yellow" filter="url(#shadow)"/>
+  <text x="555" y="590" text-anchor="middle" class="node-title">是否暴击</text>
+  <text x="555" y="612" text-anchor="middle" class="node-text">依据暴击率判定</text>
+
+  <rect x="790" y="190" width="220" height="72" class="purple" filter="url(#shadow)"/>
+  <text x="900" y="220" text-anchor="middle" class="node-title">攻击区</text>
+  <text x="900" y="244" text-anchor="middle" class="node-text">取当前面板攻击力</text>
+
+  <rect x="1040" y="190" width="220" height="72" class="purple" filter="url(#shadow)"/>
+  <text x="1150" y="220" text-anchor="middle" class="node-title">倍率区</text>
+  <text x="1150" y="244" text-anchor="middle" class="node-text">普通 110% / 强化 264%</text>
+
+  <rect x="915" y="300" width="220" height="78" class="purple" filter="url(#shadow)"/>
+  <text x="1025" y="332" text-anchor="middle" class="node-title">基础伤害 Base DMG</text>
+  <text x="1025" y="356" text-anchor="middle" class="node-text">攻击区 × 倍率区</text>
+
+  <rect x="790" y="420" width="220" height="88" class="gray" filter="url(#shadow)"/>
+  <text x="900" y="452" text-anchor="middle" class="node-title">增伤区</text>
+  <text x="900" y="478" text-anchor="middle" class="node-text">1 + 所有类型增伤总和</text>
+  <text x="900" y="500" text-anchor="middle" class="note">样本中出现 3.514 / 4.239</text>
+
+  <rect x="1040" y="420" width="220" height="88" class="gray" filter="url(#shadow)"/>
+  <text x="1150" y="452" text-anchor="middle" class="node-title">双暴区</text>
+  <text x="1150" y="478" text-anchor="middle" class="node-text">未暴击 = 1</text>
+  <text x="1150" y="500" text-anchor="middle" class="node-text">暴击 = 1 + 暴击伤害</text>
+
+  <rect x="790" y="550" width="220" height="96" class="gray" filter="url(#shadow)"/>
+  <text x="900" y="582" text-anchor="middle" class="node-title">防御区</text>
+  <text x="900" y="608" text-anchor="middle" class="node-text">基于攻方等级与敌方等级</text>
+  <text x="900" y="630" text-anchor="middle" class="node-text">当前样本约 0.5263</text>
+
+  <rect x="1040" y="550" width="220" height="96" class="gray" filter="url(#shadow)"/>
+  <text x="1150" y="582" text-anchor="middle" class="node-title">抗性区</text>
+  <text x="1150" y="608" text-anchor="middle" class="node-text">1 - 原始抗性 + 抗性穿透</text>
+  <text x="1150" y="630" text-anchor="middle" class="node-text">当前样本按 1.1</text>
+
+  <rect x="790" y="688" width="220" height="96" class="gray" filter="url(#shadow)"/>
+  <text x="900" y="720" text-anchor="middle" class="node-title">易伤区</text>
+  <text x="900" y="746" text-anchor="middle" class="node-text">1 + 易伤数值</text>
+  <text x="900" y="768" text-anchor="middle" class="node-text">当前样本按 1.09</text>
+
+  <rect x="1040" y="688" width="220" height="96" class="gray" filter="url(#shadow)"/>
+  <text x="1150" y="720" text-anchor="middle" class="node-title">减伤区</text>
+  <text x="1150" y="746" text-anchor="middle" class="node-text">战甲 0.75 × 坚防守备 0.5</text>
+  <text x="1150" y="768" text-anchor="middle" class="node-text">当前样本按 0.375</text>
+
+  <rect x="1450" y="300" width="210" height="72" class="blue" filter="url(#shadow)"/>
+  <text x="1555" y="330" text-anchor="middle" class="node-title">输出最终伤害</text>
+  <text x="1555" y="354" text-anchor="middle" class="node-text">显示最终结算数字</text>
+
+  <rect x="1450" y="430" width="210" height="84" class="blue" filter="url(#shadow)"/>
+  <text x="1555" y="462" text-anchor="middle" class="node-title">扣减目标生命 / 韧性</text>
+  <text x="1555" y="488" text-anchor="middle" class="node-text">触发受击结果</text>
+  <text x="1555" y="510" text-anchor="middle" class="node-text">并刷新状态</text>
+
+  <polygon points="1555,580 1650,635 1555,690 1460,635" class="yellow" filter="url(#shadow)"/>
+  <text x="1555" y="630" text-anchor="middle" class="node-title">目标是否存活</text>
+  <text x="1555" y="652" text-anchor="middle" class="node-text">存活 / 死亡</text>
+
+  <rect x="1480" y="748" width="150" height="60" class="green" filter="url(#shadow)"/>
+  <text x="1555" y="784" text-anchor="middle" class="node-title">继续战斗</text>
+
+  <rect x="1480" y="842" width="150" height="60" class="red" filter="url(#shadow)"/>
+  <text x="1555" y="878" text-anchor="middle" class="node-title">目标死亡</text>
+
+  <path d="M210 258 L210 290" class="line"/>
+  <path d="M210 368 L210 400" class="line"/>
+  <path d="M210 496 L210 530" class="line"/>
+  <path d="M340 322 L435 322 L435 285 L460 285" class="line"/>
+  <path d="M555 340 L555 390" class="line"/>
+  <path d="M555 340 L555 540" class="dashed"/>
+  <path d="M555 650 L555 760 L900 760 L900 784" class="dashed"/>
+  <path d="M650 595 L790 595" class="line"/>
+  <path d="M900 262 L900 300" class="line"/>
+  <path d="M1150 262 L1150 300" class="line"/>
+  <path d="M1025 378 L1025 420" class="line"/>
+  <path d="M1010 464 L1040 464" class="line"/>
+  <path d="M1260 464 L1450 336" class="line"/>
+  <path d="M900 508 L900 550" class="line"/>
+  <path d="M1150 508 L1150 550" class="line"/>
+  <path d="M1010 598 L1040 598" class="line"/>
+  <path d="M900 646 L900 688" class="line"/>
+  <path d="M1150 646 L1150 688" class="line"/>
+  <path d="M1260 736 L1450 336" class="line"/>
+  <path d="M1555 372 L1555 430" class="line"/>
+  <path d="M1555 514 L1555 580" class="line"/>
+  <path d="M1555 690 L1555 748" class="line"/>
+  <path d="M1650 635 L1710 635 L1710 872 L1630 872" class="line"/>
+
+  <text x="575" y="374" class="edge-label">否</text>
+  <text x="674" y="585" class="edge-label">是</text>
+  <text x="1570" y="724" class="edge-label">是</text>
+  <text x="1668" y="660" class="edge-label">否</text>
+
+  <rect x="780" y="840" width="500" height="86" class="lane-soft"/>
+  <text x="800" y="870" class="node-title">说明</text>
+  <text x="800" y="896" class="node-text">1. 本流程图基于青雀普攻样本整理，用于展示《崩坏：星穹铁道》常规直伤的核心结算顺序。</text>
+  <text x="800" y="918" class="node-text">2. 图中各乘区取值为当前样本下的验证口径，实际作答时可结合更多样本继续修正。</text>
+</svg>
+

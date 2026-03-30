@@ -258,6 +258,37 @@ h1 {
   color: var(--accent);
   transform: translateY(-2px);
 }
+
+/* Bilibili Link specific styles */
+.bilibili-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.2s;
+  border-bottom: none;
+}
+
+.bilibili-icon {
+  fill: #fb7299; /* Dark Mode Pink */
+  transition: fill 0.3s ease;
+}
+
+[data-theme="light"] .bilibili-icon {
+  fill: #00aeec; /* Light Mode Blue */
+}
+
+.bilibili-link:hover {
+  color: #fb7299;
+}
+
+[data-theme="light"] .bilibili-link:hover {
+  color: #00aeec;
+}
 /* #endregion */
 
 
