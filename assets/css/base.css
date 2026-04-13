@@ -1,0 +1,61 @@
+/* #region 基础样式与重置 */
+html,
+body {
+  height: 100%;
+  transition: background 0.3s, color 0.3s;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "SimSun", "宋体", "STSong", "Songti SC", serif;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--muted);
+  transition: all 0.2s;
+}
+
+a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.icon-github {
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+  margin-right: 4px;
+  margin-bottom: 2px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.icon-wrap {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 2px;
+  margin-left: 12px;
+}
+
+a:hover .icon-github {
+  opacity: 1;
+}
+
+/* 专门针对关于我(About me)段落内的文字链接 */
+#about p a {
+  color: var(--link-color);
+  border-bottom: 1.5px solid transparent;
+  font-weight: 600;
+  transition: border-color 0.2s;
+}
+
+#about p a:hover {
+  border-bottom-color: var(--link-color);
+}
+/* #endregion */

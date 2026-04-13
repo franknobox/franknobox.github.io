@@ -1,0 +1,324 @@
+/* #region 主内容区组件 */
+section {
+  margin: 0 0 60px 0;
+  /* 增加页面留白 */
+  padding: 0;
+  background: transparent;
+  /* 移除卡片背景 */
+  border: none;
+  /* 无边框 */
+  border-radius: 0;
+  border-bottom: 1px solid var(--line);
+  /* 柔和的分割线 */
+  padding-bottom: 40px;
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+section h2 {
+  margin: 0 0 24px 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.5px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+/* 正文排版 */
+p {
+  margin: 0 0 16px 0;
+  max-width: 680px;
+  /* 限制阅读宽度，防止单行文字过长疲劳 */
+}
+
+ul {
+  padding-left: 20px;
+  margin: 0 0 16px 0;
+  max-width: 680px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* 内容层级的副标题 */
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 24px 0 12px 0;
+  color: var(--text);
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-block;
+  /* 允许进行悬停位移 */
+}
+
+/* 交互悬停特效 */
+section[data-widget]:hover h2 {
+  transform: translateY(-2px);
+  color: var(--accent);
+}
+
+.item[data-widget]:hover h3,
+.project-item[data-widget]:hover h3,
+li[data-widget]:hover,
+p[data-widget]:hover {
+  transform: translateY(-2px);
+  color: var(--accent);
+  cursor: pointer;
+}
+
+/* 项目条目间距 */
+.project-item {
+  margin-bottom: 32px;
+  position: relative;
+  padding-top: 2px;
+}
+
+.project-item h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  padding-right: 120px;
+  /* 防止标题和绝对定位的链接重叠 */
+  line-height: 1.4;
+}
+
+.project-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+  padding: 4px;
+}
+
+.project-link:hover {
+  color: var(--accent);
+  transform: translateX(2px);
+  /* 轻微箭头向右跳动 */
+}
+
+.project-img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+/* 带有Logo列表排版设置 */
+.item-with-logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.school-logo {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  border-radius: 8px;
+  flex-shrink: 0;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.item-with-logo:hover .school-logo {
+  opacity: 1;
+}
+
+.item-with-logo-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.company-logo {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  border-radius: 8px;
+  flex-shrink: 0;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+  margin-top: -30px;
+  /* 轻微上移补偿视觉重心 */
+}
+
+.item-with-logo-right:hover .company-logo {
+  opacity: 1;
+}
+/* #endregion */
+
+
+/* #region 全局UI小组件 */
+/* 主题切换开关 */
+.theme-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  opacity: 0.7;
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
+  opacity: 1;
+}
+
+footer {
+  margin-top: 80px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+  padding-top: 40px;
+}
+/* #endregion */
+
+/* #region 右侧边栏交互窗口层 (Widgets) */
+/* 右侧内容动态窗口层 */
+.sidebar-right {
+  width: 280px;
+  position: fixed;
+  right: 40px;
+  top: 120px;
+  bottom: 40px;
+  z-index: 10;
+  pointer-events: none;
+  /* 允许用户的点击穿透此处的空白区域 */
+}
+
+/* 弹出窗口的具体容器 */
+.widget {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  /* 隐藏状态时不阻挡点击事件 */
+  background: var(--bg);
+  /* 避免内容重叠时造成视觉干扰 */
+}
+
+.widget-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  pointer-events: auto;
+}
+
+.widget-title {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 8px;
+  display: inline-block;
+}
+
+.widget-summary {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.widget-body {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.widget-body p {
+  margin-bottom: 12px;
+}
+
+#widget-status .widget-body {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+/* 技术栈分类 */
+.skill-category {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.widget-body>.skill-category:first-child {
+  margin-top: 0;
+}
+
+.skill-divider {
+  border: 0;
+  height: 1px;
+  background: var(--line);
+  margin: 12px 0;
+}
+
+/* 弹出窗口内的标签 */
+.widget .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.widget .tags span {
+  font-size: 12px;
+  padding: 4px 10px;
+  background: var(--hover);
+  border-radius: 4px;
+  color: var(--text);
+  border: 1px solid var(--line);
+}
+
+/* 操作号召链接 (Call to Action) */
+.widget-cta {
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.widget-cta a {
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent);
+}
+
+.widget-cta a:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* 屏幕尺寸变小时隐藏右侧窗口层 */
+@media (max-width: 1000px) {
+  .sidebar-right {
+    display: none;
+  }
+}
+/* #endregion */

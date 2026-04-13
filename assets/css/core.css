@@ -1,0 +1,80 @@
+/* #region 全局变量与主题 */
+:root {
+  /* 深色模式(默认) - 统一背景色 */
+  --bg: #121314; /* 纯正石墨黑 */
+  --text: #e0e0e0;
+  --muted: #888d94; /* 中性的石墨灰次要文字 */
+  --line: #1f2227; /* 柔和的石墨色分割线 */
+  --accent: #ffffff; /* 用于标题的高对比颜色 */
+  --hover: rgba(255, 255, 255, 0.05); /* 鼠标悬停时的背景高亮 */
+  --maxw: 800px; /* 限制阅读区的最大宽度 */
+  --link-color: #79c0ff; /* 适合深色模式的高亮天蓝色文本链接 */
+}
+
+[data-theme="light"] {
+  /* 浅色模式 - 统一背景色 */
+  --bg: #fdfbf7; /* 稍微偏暖、更护眼的次白色 */
+  --text: #333333;
+  --muted: #666666;
+  --line: #eae8e4; /* 匹配暖色背景的分割线 */
+  --accent: #000000;
+  --hover: rgba(0, 0, 0, 0.03);
+  --link-color: #0969da; /* 适合浅色模式的舒适蓝色文本链接 */
+}
+
+/* 根据主题切换图片显示 */
+.theme-img-light {
+  display: none !important;
+}
+
+.theme-img-dark {
+  display: block !important;
+}
+
+[data-theme="light"] .theme-img-light {
+  display: block !important;
+}
+
+[data-theme="light"] .theme-img-dark {
+  display: none !important;
+}
+/* #endregion */
+
+/* #region 全局响应式 */
+
+@media (max-width: 1280px) {
+
+  /* 增加断点以避免在较小的桌面端重叠 */
+  .wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 800px;
+    /* 在小屏幕上依然保持良好的阅读宽度 */
+    margin: 0 auto;
+  }
+
+  .sidebar {
+    position: relative;
+    /* 切换为静态文档流排版 */
+    width: 100%;
+    left: auto;
+    top: auto;
+    bottom: auto;
+    margin-bottom: 40px;
+    height: auto;
+    z-index: 1;
+    overflow-y: visible;
+  }
+
+
+  .sidebar nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px 30px;
+  }
+
+  .sidebar a {
+    display: inline-block;
+  }
+}
+/* #endregion */

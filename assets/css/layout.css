@@ -1,0 +1,199 @@
+/* #region 全局排版骨架 */
+/* 主容器 */
+.main-container {
+  display: block;
+  margin-top: 60px;
+}
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 40px 20px 100px;
+  /* 增加顶部内边距，让顶栏往下压一点 */
+  position: relative;
+}
+/* #endregion */
+
+/* 左侧边栏 - 固定定位 */
+/* #region 左侧边栏 */
+.sidebar {
+  width: 260px;
+  /* 加宽 */
+  position: fixed;
+  left: 60px;
+  top: 120px;
+  bottom: 40px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.sidebar nav {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  /* 更宽裕的间距 */
+}
+
+.sidebar a {
+  display: block;
+  border-bottom: none;
+  font-size: 18px;
+  /* 更大的字体 */
+  color: var(--muted);
+  font-weight: 400;
+  padding: 8px 16px;
+  /* 更大的点击热区 */
+  margin-left: -16px;
+  /* 靠左对齐补偿，为了让鼠标悬停时的背景框对齐文字 */
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  /* 丝滑过渡特效 */
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  color: var(--accent);
+  background: var(--hover);
+  /* 细微的悬停背景色 */
+  transform: translateX(8px);
+  /* 轻微的向右滑动位移 */
+}
+/* #endregion */
+
+/* #region 顶部信息区 */
+/* 极简顶栏 */
+header {
+  padding: 40px 0;
+  background: transparent;
+  border: none;
+  margin-bottom: 40px;
+  position: relative;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.header-info {
+  flex: 1;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--accent);
+}
+
+.basic-info {
+  color: var(--muted);
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+}
+
+.info-icon {
+  display: inline-block;
+  width: 24px;
+  text-align: center;
+  margin-right: 8px;
+  /* 图标和文字链接之间的间距 */
+}
+
+.info-icon .icon-github {
+  margin-right: 0;
+  margin-bottom: 0px;
+}
+
+.info-item:first-child {
+  width: 215px;
+  /* 缩小列宽，让右侧列更贴紧 */
+  flex-shrink: 0;
+}
+
+.basic-info a {
+  margin-left: 0;
+  border-bottom: none;
+}
+
+/* 头像区域 */
+.header-avatar {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 40px;
+  border: 2px solid var(--line);
+  flex-shrink: 0;
+}
+
+/* 顶部导航菜单 */
+.header-nav {
+  margin-top: 30px;
+  display: flex;
+  gap: 32px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.header-nav a {
+  color: var(--muted);
+  border-bottom: none;
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.header-nav a:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* Bilibili 专属链接样式 */
+.bilibili-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.2s;
+  border-bottom: none;
+}
+
+.bilibili-icon {
+  fill: #fb7299; /* 深色模式使用猛男粉 */
+  transition: fill 0.3s ease;
+}
+
+[data-theme="light"] .bilibili-icon {
+  fill: #00aeec; /* 浅色模式使用B站蓝 */
+}
+
+.bilibili-link:hover {
+  color: #fb7299;
+}
+
+[data-theme="light"] .bilibili-link:hover {
+  color: #00aeec;
+}
+/* #endregion */
