@@ -27,6 +27,10 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    if (window.SiteI18n) {
+        window.SiteI18n.init();
+    }
+
     // ==========================================
     // Widget System Logic
     // ==========================================
@@ -88,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const role = trigger.dataset.role ? ' - ' + trigger.dataset.role : '';
             setText('#project-role', trigger.dataset.title + role);
             setText('#project-desc', trigger.dataset.desc);
-            
+
             const stackEl = targetWidget.querySelector('#project-stack');
             if (stackEl) {
                 stackEl.innerHTML = '';
@@ -154,12 +158,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const newsMoreContainer = document.getElementById("news-more-container");
     if (newsMoreBtn && newsMoreContainer) {
         newsMoreBtn.addEventListener("click", () => {
+            const currentLang = localStorage.getItem('lang') || 'zh';
+            const labels = window.SiteI18n?.i18nData?.[currentLang];
             if (newsMoreContainer.style.display === "none") {
                 newsMoreContainer.style.display = "block";
-                newsMoreBtn.textContent = "less";
+                newsMoreBtn.textContent = labels?.news_less || "less";
             } else {
                 newsMoreContainer.style.display = "none";
-                newsMoreBtn.textContent = "more";
+                newsMoreBtn.textContent = labels?.news_more || "more";
             }
         });
     }

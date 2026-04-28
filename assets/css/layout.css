@@ -93,6 +93,17 @@ h1 {
   color: var(--accent);
 }
 
+.name-nickname {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.name-real {
+  font-size: 28px;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
 .basic-info {
   color: var(--muted);
   font-size: 15px;

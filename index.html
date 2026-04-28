@@ -13,13 +13,12 @@
   <div class="wrap">
 
     <header id="top" data-widget="widget-status">
+      <button id="lang-toggle" class="lang-toggle" title="Switch Language">EN</button>
       <button id="theme-toggle" class="theme-toggle" title="Toggle Theme">☀️</button>
 
       <div class="header-top">
         <div class="header-info">
-          <h1>Kaixin Fan
-            <br>范开新
-          </h1>
+          <h1><span class="name-nickname">Franknobox</span><br><span class="name-real">Kaixin Fan</span></h1>
           <div class="basic-info">
             <div class="info-row">
               <span class="info-item"><span class="info-icon">🏫</span> Shenzhen University</span>
@@ -41,117 +40,119 @@
             </div>
           </div>
         </div>
-        <img src="assets/images/main/avatar.jpg" alt="Avatar" class="header-avatar">
+        <img src="assets/images/main/avatar.jpg" alt="Avatar" class="header-avatar" data-i18n-attr="alt:alt_avatar">
       </div>
 
       <nav class="header-nav">
-        <a href="academic/index.html">学术 Academic</a>
-        <a href="ai/index.html">我与AI AI&Me</a>
-        <a href="game/index.html">我与游戏 Games&Me</a>
+        <a href="academic/index.html" data-i18n="nav_academic">学术 Academic</a>
+        <a href="ai/index.html" data-i18n="nav_ai">我与AI AI&Me</a>
+        <a href="game/index.html" data-i18n="nav_game">我与游戏 Games&Me</a>
       </nav>
     </header>
 
     <div class="main-container">
       <aside class="sidebar">
         <nav>
-          <a href="#about">关于我 About me</a>
-          <a href="#news">最近 News</a>
-          <a href="#education">教育经历 Education</a>
-          <a href="#internships">实习经历 Internships</a>
-          <a href="#projects">项目经历 Projects</a>
-          <a href="#interests">兴趣爱好 Interests</a>
-          <a href="#contact">联系我 Contact</a>
+          <a href="#about" data-i18n="sidebar_about">关于我 About me</a>
+          <a href="#news" data-i18n="sidebar_news">最近 News</a>
+          <a href="#education" data-i18n="sidebar_education">教育经历 Education</a>
+          <a href="#internships" data-i18n="sidebar_internships">实习经历 Internships</a>
+          <a href="#projects" data-i18n="sidebar_projects">项目经历 Projects</a>
+          <a href="#interests" data-i18n="sidebar_interests">兴趣爱好 Interests</a>
+          <a href="#contact" data-i18n="sidebar_contact">联系我 Contact</a>
         </nav>
       </aside>
 
       <main class="content">
         <!-- About me -->
         <section id="about" data-widget="widget-skills">
-          <h2>关于我 About me</h2>
-          <p>我是来自<a href="https://www.szu.edu.cn/" target="_blank">深圳大学</a>管理学院的一名本科生。目前关注的方向包括游戏开发、VR/XR交互应用、AI Agent以及Vibe coding相关领域。 我对AI智能体的设计、工作流构建，以及将AI应用于人机交互设计、内容生产与产品场景具有浓厚兴趣。</p>
-          <p>25年6月至9月，我在<a href="https://www.hkust-gz.edu.cn/"target="_blank">香港科技大学(广州)</a>作为访问学生修读暑期课程。
-             25年12月至26年3月，我在<a href="https://atoms.dev/" target="_blank">Atoms</a>实习。
-             26年4月起，我在深圳<a href="https://www.q1.com/" target="_blank">冰川网络</a>3D引擎部，作为游戏技术策划实习生。</p>
-          <p>我正在积极寻求 2027 fall 的 Mphil 项目机会以及27年应届的实习机会，若有意进一步交流，请联系我！
+          <h2 data-i18n="about_title">关于我 About me</h2>
+          <p data-i18n-html="about_p1">我是来自<a href="https://www.szu.edu.cn/" target="_blank" rel="noreferrer noopener">深圳大学</a>管理学院的一名本科生。目前关注的方向包括游戏开发、VR/XR交互应用、AI Agent以及Vibe coding相关领域。我对AI智能体的设计、工作流构建，以及将AI应用于人机交互设计、内容生产与产品场景具有浓厚兴趣。</p>
+          <p data-i18n-html="about_p2">25年6月至9月，我在<a href="https://www.hkust-gz.edu.cn/" target="_blank" rel="noreferrer noopener">香港科技大学(广州)</a>作为访问学生修读暑期课程。25年12月至26年3月，我在<a href="https://atoms.dev/" target="_blank" rel="noreferrer noopener">Atoms</a>实习。26年4月起，我在深圳<a href="https://www.q1.com/" target="_blank" rel="noreferrer noopener">冰川网络</a>3D引擎部，作为游戏技术策划实习生。</p>
+          <p data-i18n="about_p3">我正在积极寻求 2027 fall 的 Mphil 项目机会以及27年应届的实习机会，若有意进一步交流，请联系我！</p>
         </section>
 
         <!-- News -->
         <section id="news" data-widget="widget-news">
-          <h2>最近 News</h2>
-          <p data-widget="widget-news-detail" data-date="2026.4" data-content="加入深圳市冰川网络实习...">
-            <strong>2026.4</strong> 加入深圳市冰川网络实习。
+          <h2 data-i18n="news_title">最近 News</h2>
+          <p data-widget="widget-news-detail" data-date="2026.4" data-content="加入深圳市冰川网络实习..." data-i18n-dataset="content:news_2026_4_glacier_content">
+            <strong>2026.4</strong> <span data-i18n="news_2026_4_glacier">加入深圳市冰川网络实习。</span>
           </p>
-          <p data-widget="widget-news-detail" data-date="2026.4" data-content="AI+VRET+合作范式+本土化，主要面向社交焦虑障碍(SAD)人群。作为技术负责人，进行Unity VR场景的逻辑搭建、交互设计以及与AI LLM的结合。">
-            <strong>2026.4</strong> 参与深大李鹏教授课题组，关于虚拟现实暴露疗法(VRET)的科研项目。
+          <p data-widget="widget-news-detail" data-date="2026.4" data-content="AI+VRET+合作范式+本土化，主要面向社交焦虑障碍(SAD)人群。作为技术负责人，进行Unity VR场景的逻辑搭建、交互设计以及与AI LLM的结合。" data-i18n-dataset="content:news_2026_4_vret_content">
+            <strong>2026.4</strong> <span data-i18n="news_2026_4_vret">参与深大李鹏教授课题组，关于虚拟现实暴露疗法(VRET)的科研项目。</span>
           </p>
-          <p data-widget="widget-news-detail" data-date="2026.3" data-content="不断地投简历与面试中...">
-            <strong>2026.3</strong> 不断地投简历与面试中...
+          <p data-widget="widget-news-detail" data-date="2026.3" data-content="不断地投简历与面试中..." data-i18n-dataset="content:news_2026_3_apply_content">
+            <strong>2026.3</strong> <span data-i18n="news_2026_3_apply">不断地投简历与面试中...</span>
           </p>
-          <p data-widget="widget-news-detail" data-date="2026.3" data-content="加入LoongClaw开源组织，参与项目开发。">
-            <strong>2026.3</strong> 加入LoongClaw开源组织，参与项目开发。
+          <p data-widget="widget-news-detail" data-date="2026.3" data-content="加入LoongClaw开源组织，参与项目开发。" data-i18n-dataset="content:news_2026_3_loongclaw_content">
+            <strong>2026.3</strong> <span data-i18n="news_2026_3_loongclaw">加入LoongClaw开源组织，参与项目开发。</span>
           </p>
 
           <div id="news-more-container" style="display: none;">
-            <p data-widget="widget-news-detail" data-date="2026.3" data-content="参加深圳理工大学AI Agent创新大赛。">
-              <strong>2026.3</strong> 参加深圳理工大学AI Agent创新大赛。
+            <p data-widget="widget-news-detail" data-date="2026.3" data-content="参加深圳理工大学AI Agent创新大赛。" data-i18n-dataset="content:news_2026_3_competition_content">
+              <strong>2026.3</strong> <span data-i18n="news_2026_3_competition">参加深圳理工大学AI Agent创新大赛。</span>
             </p>
-            <p data-widget="widget-news-detail" data-date="2026.2" data-content="搭建个人主页网站结构，采用极简学术风格与响应式设计。">
-              <strong>2026.2</strong> 搭建个人主页网站。
+            <p data-widget="widget-news-detail" data-date="2026.2" data-content="搭建个人主页网站结构，采用极简学术风格与响应式设计。" data-i18n-dataset="content:news_2026_2_website_content">
+              <strong>2026.2</strong> <span data-i18n="news_2026_2_website">搭建个人主页网站。</span>
             </p>
-            <p data-widget="widget-news-detail" data-date="2026.2" data-content="参加2026中国大学生萌芽GameJam，探索新机制。">
-              <strong>2026.2</strong> 参加2026中国大学生萌芽GameJam。
+            <p data-widget="widget-news-detail" data-date="2026.2" data-content="参加2026中国大学生萌芽GameJam，探索新机制。" data-i18n-dataset="content:news_2026_2_gamejam_content">
+              <strong>2026.2</strong> <span data-i18n="news_2026_2_gamejam">参加2026中国大学生萌芽GameJam。</span>
             </p>
-            <p data-widget="widget-news-detail" data-date="2026.1" data-content="参加2026 Global GameJam，48小时极限开发挑战。">
-              <strong>2026.1</strong> 参加2026 Global GameJam。
+            <p data-widget="widget-news-detail" data-date="2026.1" data-content="参加2026 Global GameJam，48小时极限开发挑战。" data-i18n-dataset="content:news_2026_1_ggj_content">
+              <strong>2026.1</strong> <span data-i18n="news_2026_1_ggj">参加2026 Global GameJam。</span>
             </p>
           </div>
 
-          <span id="news-more-btn" style="color: var(--muted); opacity: 0.7; font-weight: 700; cursor: pointer; font-size: 15px; display: inline-block; margin-top: -10px; margin-left: 2px; transition: all 0.2s;" onmouseover="this.style.opacity='1'; this.style.color='var(--accent)'" onmouseout="this.style.opacity='0.7'; this.style.color='var(--muted)'">more</span>
+          <span id="news-more-btn" style="color: var(--muted); opacity: 0.7; font-weight: 700; cursor: pointer; font-size: 15px; display: inline-block; margin-top: -10px; margin-left: 2px; transition: all 0.2s;" onmouseover="this.style.opacity='1'; this.style.color='var(--accent)'" onmouseout="this.style.opacity='0.7'; this.style.color='var(--muted)'" data-i18n="news_more">more</span>
         </section>
 
         <!-- Education -->
         <section id="education" data-widget="widget-education">
-          <h2>教育经历 Education</h2>
+          <h2 data-i18n="education_title">教育经历 Education</h2>
           <div class="item" data-widget="widget-education-detail" data-school="深圳大学 Shenzhen University"
-            data-major="管理学 Management" data-time="2023 - 2027" data-desc="主修工商管理学，辅修人工智能相关课程。">
+            data-major="管理学 Management" data-time="2023 - 2027" data-desc="主修工商管理学，辅修人工智能相关课程。"
+            data-i18n-dataset="school:edu_szu_data_school;major:edu_szu_data_major;desc:edu_szu_data_desc">
             <div class="item-with-logo">
-              <img src="assets/images/main/szu-logo.png" alt="深圳大学校徽" class="school-logo">
+              <img src="assets/images/main/szu-logo.png" alt="深圳大学校徽" class="school-logo" data-i18n-attr="alt:alt_szu_logo">
               <div>
-                <h3>深圳大学 Shenzhen University</h3>
-                <p>本科 | 管理学 | 2023 - 2027</p>
+                <h3 data-i18n="edu_szu_name">深圳大学 Shenzhen University</h3>
+                <p data-i18n="edu_szu_major">本科 | 管理学 | 2023 - 2027</p>
               </div>
             </div>
           </div>
 
           <div class="item" data-widget="widget-education-detail" data-school="香港科技大学（广州） HKUST(GZ)"
-            data-major="暑期学校 Summer School" data-time="2025.06 - 2025.09" data-desc="暑期学校访问学生，参与跨学科课程学习与学术交流。">
+            data-major="暑期学校 Summer School" data-time="2025.06 - 2025.09" data-desc="暑期学校访问学生，参与跨学科课程学习与学术交流。"
+            data-i18n-dataset="school:edu_hkust_data_school;major:edu_hkust_data_major;desc:edu_hkust_data_desc">
             <div class="item-with-logo">
-              <img src="assets/images/main/hkustgz-logo.png" alt="港科广校徽" class="school-logo">
+              <img src="assets/images/main/hkustgz-logo.png" alt="港科广校徽" class="school-logo" data-i18n-attr="alt:alt_hkust_logo">
               <div>
-                <h3>香港科技大学（广州） HKUST(GZ)</h3>
-                <p>暑期访问学生 | 2025.06 - 2025.09</p>
+                <h3 data-i18n="edu_hkust_name">香港科技大学（广州） HKUST(GZ)</h3>
+                <p data-i18n="edu_hkust_major">暑期访问学生 | 2025.06 - 2025.09</p>
               </div>
             </div>
           </div>
 
           <div class="item" data-widget="widget-education-detail" data-school="深圳市高级中学 Shenzhen Senior High School"
-            data-major="普通高中 Senior High School" data-time="2017 - 2023" data-desc="完成初中与高中阶段学业。">
+            data-major="普通高中 Senior High School" data-time="2017 - 2023" data-desc="完成初中与高中阶段学业。"
+            data-i18n-dataset="school:edu_szhs_data_school;major:edu_szhs_data_major;desc:edu_szhs_data_desc">
             <div class="item-with-logo">
-              <img src="assets/images/main/shenzhong-logo.png" alt="深圳高级中学校徽" class="school-logo">
+              <img src="assets/images/main/shenzhong-logo.png" alt="深圳高级中学校徽" class="school-logo" data-i18n-attr="alt:alt_szhs_logo">
               <div>
-                <h3>深圳市高级中学 Shenzhen Senior High School</h3>
-                <p>中学 | 2017 - 2023</p>
+                <h3 data-i18n="edu_szhs_name">深圳市高级中学 Shenzhen Senior High School</h3>
+                <p data-i18n="edu_szhs_major">中学 | 2017 - 2023</p>
               </div>
             </div>
           </div>
 
           <div class="item" data-widget="widget-education-detail" data-school="深圳市荔轩小学 Lixuan Primary School"
-            data-major="小学 Primary School" data-time="2011 - 2017" data-desc="特地找到了我小学的校徽，现在学校已经更名重建了，我是最后一批毕业生，特此纪念一下">
+            data-major="小学 Primary School" data-time="2011 - 2017" data-desc="特地找到了我小学的校徽，现在学校已经更名重建了，我是最后一批毕业生，特此纪念一下"
+            data-i18n-dataset="school:edu_lixuan_data_school;major:edu_lixuan_data_major;desc:edu_lixuan_data_desc">
             <div class="item-with-logo">
-              <img src="assets/images/main/lixuan-logo.png" alt="荔轩小学校徽" class="school-logo">
+              <img src="assets/images/main/lixuan-logo.png" alt="荔轩小学校徽" class="school-logo" data-i18n-attr="alt:alt_lixuan_logo">
               <div>
-                <h3>深圳市荔轩小学 Lixuan Primary School</h3>
-                <p>小学 | 2011 - 2017</p>
+                <h3 data-i18n="edu_lixuan_name">深圳市荔轩小学 Lixuan Primary School</h3>
+                <p data-i18n="edu_lixuan_major">小学 | 2011 - 2017</p>
               </div>
             </div>
           </div>
@@ -159,29 +160,31 @@
 
         <!-- Internships -->
         <section id="internships" data-widget="widget-internships">
-          <h2>实习经历 Internships</h2>
+          <h2 data-i18n="internships_title">实习经历 Internships</h2>
 
           <div class="item" data-widget="widget-internship-detail" data-company="冰川网络"
-            data-role="技术策划实习生 Technical Designer Intern" data-time="2026.4 - NOW" data-desc="------">
+            data-role="技术策划实习生 Technical Designer Intern" data-time="2026.4 - NOW" data-desc="------"
+            data-i18n-dataset="company:intern_glacier_data_company;role:intern_glacier_data_role;time:intern_glacier_data_time;desc:intern_glacier_data_desc">
             <div class="item-with-logo-right">
               <div>
-                <h3>冰川网络</h3>
-                <p>3D引擎部 实习生 | 2026.4 - NOW</p>
-                <p>技术策划实习生</p>
+                <h3 data-i18n="intern_glacier_name">冰川网络</h3>
+                <p data-i18n="intern_glacier_role">3D引擎部 实习生 | 2026.4 - NOW</p>
+                <p data-i18n="intern_glacier_title">技术策划实习生</p>
               </div>
-              <img src="assets/images/main/Q1-logo.png" alt="Company Logo" class="company-logo">
+              <img src="assets/images/main/Q1-logo.png" alt="Company Logo" class="company-logo" data-i18n-attr="alt:alt_q1_logo">
             </div>
           </div>
 
           <div class="item" data-widget="widget-internship-detail" data-company="Deepwisdom" data-role="实习生 Intern"
-            data-time="时间段" data-desc="深度探索与工作。">
+            data-time="时间段" data-desc="深度探索与工作。"
+            data-i18n-dataset="company:intern_atoms_data_company;role:intern_atoms_data_role;time:intern_atoms_data_time;desc:intern_atoms_data_desc">
             <div class="item-with-logo-right">
               <div>
-                <h3>Deepwisdom</h3>
-                <p>Intern | 2025.12 - 2026.3</p>
-                <p>“Atoms 是一个可以让你‘用一句话启动一家创业公司’的平台。”<br>你只需要有一个想法，输入给 Atoms，它就会召唤出一个智能体团队——包括产品经理、架构师、工程师、测试、数据分析师等——帮你调研、设计、开发、部署一个完整的产品。</p>
+                <h3 data-i18n="intern_atoms_name">Deepwisdom</h3>
+                <p data-i18n="intern_atoms_role">Intern | 2025.12 - 2026.3</p>
+                <p data-i18n-html="intern_atoms_desc">“Atoms 是一个可以让你‘用一句话启动一家创业公司’的平台。”<br>你只需要有一个想法，输入给 Atoms，它就会召唤出一个智能体团队——包括产品经理、架构师、工程师、测试、数据分析师等——帮你调研、设计、开发、部署一个完整的产品。</p>
               </div>
-              <img src="assets/images/main/atoms.png" alt="Deepwisdom Logo" class="company-logo">
+              <img src="assets/images/main/atoms.png" alt="Deepwisdom Logo" class="company-logo" data-i18n-attr="alt:alt_deepwisdom_logo">
             </div>
           </div>
 
@@ -189,55 +192,59 @@
 
         <!-- Projects & Experience -->
         <section id="projects" data-widget="widget-projects">
-          <h2>项目经历 Projects</h2>
+          <h2 data-i18n="projects_title">项目经历 Projects</h2>
 
           <div class="project-item" data-widget="widget-project-detail"
             data-title="清华深研院Agentland实验室"
-            data-desc="参加清华大学深圳研究生院Agentland实验室组织的AI游戏工作坊，参与AI Native游戏全流程开发。">
-            <h3>清华深研院Agentland实验室</h3>
-            <p>参加清华大学深圳研究生院Agentland实验室的AI游戏工作坊。</p>
+            data-desc="参加清华大学深圳研究生院Agentland实验室组织的AI游戏工作坊，参与AI Native游戏全流程开发。"
+            data-i18n-dataset="title:proj_tsinghua_data_title;desc:proj_tsinghua_data_desc">
+            <h3 data-i18n="proj_tsinghua_name">清华深研院Agentland实验室</h3>
+            <p data-i18n="proj_tsinghua_desc">参加清华大学深圳研究生院Agentland实验室的AI游戏工作坊。</p>
           </div>
 
           <div class="project-item" data-widget="widget-project-detail"
             data-title="2025腾讯游戏星跃实战营" data-role="Minigame方向课题"
             data-desc="参加minigame方向课题“AI助力新人策划抢占未来AI玩法话语权”，拟定方向为AI Roguelike。"
-            data-stack="AI, Roguelike, 游戏策划">
-            <h3>腾讯游戏星跃实战营</h3>
-            <p>参与minigame方向课题，探索AI赋能，拟定方向为 AI Roguelike。</p>
+            data-stack="AI, Roguelike, 游戏策划"
+            data-i18n-dataset="title:proj_tencent_camp_data_title;role:proj_tencent_camp_data_role;desc:proj_tencent_camp_data_desc;stack:proj_tencent_camp_data_stack">
+            <h3 data-i18n="proj_tencent_camp_name">腾讯游戏星跃实战营</h3>
+            <p data-i18n="proj_tencent_camp_desc">参与minigame方向课题，探索AI赋能，拟定方向为 AI Roguelike。</p>
           </div>
 
           <div class="project-item" data-widget="widget-project-detail"
             data-title="腾讯未来产品经理创造营" data-role="产品经理研习"
             data-desc="研习经典产品案例，学习其在用户洞察、功能迭代及商业化变现的核心方法论。重点关注用户体验设计原则，建立了从“用户需求”到“功能定义”的产品闭环思维。掌握 Axure RP、Figma的基本功能，具备快速构建低保真原型的能力。"
-            data-stack="Axure RP, Figma, 产品思维, 用户洞察">
-            <h3>腾讯未来产品经理创造营</h3>
-            <p>研习产品案例并培养产品结构闭环思维，掌握并实践构建原型的能力。</p>
+            data-stack="Axure RP, Figma, 产品思维, 用户洞察"
+            data-i18n-dataset="title:proj_tencent_pm_data_title;role:proj_tencent_pm_data_role;desc:proj_tencent_pm_data_desc;stack:proj_tencent_pm_data_stack">
+            <h3 data-i18n="proj_tencent_pm_name">腾讯未来产品经理创造营</h3>
+            <p data-i18n="proj_tencent_pm_desc">研习产品案例并培养产品结构闭环思维，掌握并实践构建原型的能力。</p>
           </div>
 
           <div class="project-item" data-widget="widget-project-detail" data-title="Multi-Agent Collaboration Framework"
             data-role="Lead Developer"
             data-desc="Designed and implemented a framework for multi-agent communication and task allocation using LLMs."
-            data-stack="Python, LangChain, OpenAI API">
-            <h3>Multi-Agent Collaboration Framework</h3>
-            <p>基于大语言模型的多智能体协作框架，探索智能体间的通信与任务分发机制。（占位）</p>
+            data-stack="Python, LangChain, OpenAI API"
+            data-i18n-dataset="title:proj_multiagent_data_title;role:proj_multiagent_data_role;desc:proj_multiagent_data_desc;stack:proj_multiagent_data_stack">
+            <h3 data-i18n="proj_multiagent_name">Multi-Agent Collaboration Framework</h3>
+            <p data-i18n="proj_multiagent_desc">基于大语言模型的多智能体协作框架，探索智能体间的通信与任务分发机制。（占位）</p>
           </div>
         </section>
 
         <!-- 兴趣爱好 -->
         <section id="interests" data-widget="widget-interests">
-          <h2>兴趣爱好 Interests</h2>
+          <h2 data-i18n="interests_title">兴趣爱好 Interests</h2>
 
           <ul>
-            <li data-widget="widget-interest-detail" data-name="电子游戏 Games" data-desc="热衷于独立游戏开发与机制探索。">电子游戏</li>
-            <li data-widget="widget-interest-detail" data-name="篮球 Basketball" data-desc="学院篮球队成员，享受团队竞技运动的乐趣。">篮球</li>
-            <li data-widget="widget-interest-detail" data-name="音乐 Music" data-desc="喜欢听很多类型的音乐。">音乐</li>
+            <li data-widget="widget-interest-detail" data-name="电子游戏 Games" data-desc="热衷于独立游戏开发与机制探索。" data-i18n-dataset="name:interest_games_name;desc:interest_games_desc" data-i18n="interest_games">电子游戏</li>
+            <li data-widget="widget-interest-detail" data-name="篮球 Basketball" data-desc="学院篮球队成员，享受团队竞技运动的乐趣。" data-i18n-dataset="name:interest_basketball_name;desc:interest_basketball_desc" data-i18n="interest_basketball">篮球</li>
+            <li data-widget="widget-interest-detail" data-name="音乐 Music" data-desc="喜欢听很多类型的音乐。" data-i18n-dataset="name:interest_music_name;desc:interest_music_desc" data-i18n="interest_music">音乐</li>
           </ul>
 
         </section>
 
         <!-- 联系我 -->
         <section id="contact" data-widget="widget-contact">
-          <h2>联系我 Contact me</h2>
+          <h2 data-i18n="contact_title">联系我 Contact me</h2>
 
           <p>
             <span style="color: #07C160; margin-right: 4px; vertical-align: middle;">
@@ -267,22 +274,22 @@
       <aside class="sidebar-right">
         <!-- Default Status Widget -->
         <div class="widget widget-visible" id="widget-status">
-          <div class="widget-title">Status</div>
+          <div class="widget-title" data-i18n="widget_status_title">Status</div>
           <div class="widget-body">
-            <p>✨ Looking for Internship</p>
-            <p>📍 Shenzhen, China</p>
+            <p data-i18n="widget_status_seeking">✨ Looking for Summer Internship & Master's Programs</p>
+            <p data-i18n="widget_status_location">📍 Shenzhen, China</p>
           </div>
           <div class="widget-cta">
-            <a href="#contact">Contact Me -></a>
+            <a href="#contact" data-i18n="widget_status_cta">Contact Me -></a>
           </div>
         </div>
 
         <!-- Section Widgets -->
         <div class="widget widget-hidden" id="widget-skills">
-          <div class="widget-title">Tech Stack</div>
+          <div class="widget-title" data-i18n="widget_skills_title">Tech Stack</div>
           <div class="widget-body">
 
-            <div class="skill-category">编程语言</div>
+            <div class="skill-category" data-i18n="cat_programming">编程语言</div>
             <div class="tags" style="margin-top: 0;">
               <span>C#</span>
               <span>Python</span>
@@ -292,15 +299,15 @@
             </div>
             <hr class="skill-divider">
 
-            <div class="skill-category">游戏开发</div>
+            <div class="skill-category" data-i18n="cat_gamedev">游戏开发</div>
             <div class="tags" style="margin-top: 0;">
               <span>Unity</span>
               <span>Godot</span>
-              <span>UE（学习中）</span>
+              <span data-i18n="ue_learning">UE（学习中）</span>
             </div>
             <hr class="skill-divider">
 
-            <div class="skill-category">Agent开发</div>
+            <div class="skill-category" data-i18n="cat_agent">Agent开发</div>
             <div class="tags" style="margin-top: 0;">
               <span>Python</span>
               <span>LangChain</span>
@@ -311,17 +318,17 @@
             </div>
             <hr class="skill-divider">
 
-            <div class="skill-category">原型设计</div>
+            <div class="skill-category" data-i18n="cat_prototyping">原型设计</div>
             <div class="tags" style="margin-top: 0;">
               <span>Figma</span>
               <span>Axure</span>
-              <span>墨刀</span>
+              <span data-i18n="modao">墨刀</span>
               <span>Photoshop</span>
               <span>Canvas</span>
             </div>
             <hr class="skill-divider">
 
-            <div class="skill-category">数据分析</div>
+            <div class="skill-category" data-i18n="cat_data">数据分析</div>
             <div class="tags" style="margin-top: 0;">
               <span>Pandas</span>
               <span>Numpy</span>
@@ -336,56 +343,56 @@
         </div>
 
         <div class="widget widget-hidden" id="widget-news">
-          <div class="widget-title">News Overview</div>
-          <div class="widget-summary">Updates</div>
+          <div class="widget-title" data-i18n="widget_news_title">News Overview</div>
+          <div class="widget-summary" data-i18n="widget_news_summary">Updates</div>
           <div class="widget-body">
-            <p>Recent activities and achievements.</p>
+            <p data-i18n="widget_news_body">Recent activities and achievements.</p>
           </div>
         </div>
 
         <div class="widget widget-hidden" id="widget-education">
-          <div class="widget-title">Education</div>
-          <div class="widget-summary">Academic Background</div>
+          <div class="widget-title" data-i18n="widget_education_title">Education</div>
+          <div class="widget-summary" data-i18n="widget_education_summary">Academic Background</div>
           <div class="widget-body">
-            <p>Shenzhen University (SZU)</p>
+            <p data-i18n="widget_education_body">Shenzhen University (SZU)</p>
           </div>
         </div>
 
         <div class="widget widget-hidden" id="widget-internships">
-          <div class="widget-title">Experience</div>
-          <div class="widget-summary">Internships</div>
+          <div class="widget-title" data-i18n="widget_internships_title">Experience</div>
+          <div class="widget-summary" data-i18n="widget_internships_summary">Internships</div>
           <div class="widget-body">
-            <p>Professional work experience.</p>
+            <p data-i18n="widget_internships_body">Professional work experience.</p>
           </div>
         </div>
 
         <div class="widget widget-hidden" id="widget-projects">
-          <div class="widget-title">Projects</div>
-          <div class="widget-summary">Portfolio</div>
+          <div class="widget-title" data-i18n="widget_projects_title">Projects</div>
+          <div class="widget-summary" data-i18n="widget_projects_summary">Portfolio</div>
           <div class="widget-body">
-            <p>Selected works and research.</p>
+            <p data-i18n="widget_projects_body">Selected works and research.</p>
           </div>
         </div>
 
         <div class="widget widget-hidden" id="widget-interests">
-          <div class="widget-title">Interests</div>
-          <div class="widget-summary">Hobbies</div>
+          <div class="widget-title" data-i18n="widget_interests_title">Interests</div>
+          <div class="widget-summary" data-i18n="widget_interests_summary">Hobbies</div>
           <div class="widget-body">
-            <p>Personal interests and life.</p>
+            <p data-i18n="widget_interests_body">Personal interests and life.</p>
           </div>
         </div>
 
         <div class="widget widget-hidden" id="widget-contact">
-          <div class="widget-title">Contact</div>
-          <div class="widget-summary">Get in touch</div>
+          <div class="widget-title" data-i18n="widget_contact_title">Contact</div>
+          <div class="widget-summary" data-i18n="widget_contact_summary">Get in touch</div>
           <div class="widget-body">
-            <p>Open for opportunities.</p>
+            <p data-i18n="widget_contact_body">Open for opportunities.</p>
           </div>
         </div>
 
         <!-- Detail Widgets (Dynamic Content) -->
         <div class="widget widget-hidden" id="widget-news-detail">
-          <div class="widget-title">News Detail</div>
+          <div class="widget-title" data-i18n="widget_news_detail_title">News Detail</div>
           <div class="widget-summary" id="news-date"></div>
           <div class="widget-body">
             <p id="news-content"></p>
@@ -393,19 +400,19 @@
         </div>
 
         <div class="widget widget-hidden" id="widget-project-detail">
-          <div class="widget-title">Project Detail</div>
+          <div class="widget-title" data-i18n="widget_project_detail_title">Project Detail</div>
           <div class="widget-summary" id="project-role"></div>
           <div class="widget-body">
             <p id="project-desc"></p>
             <div class="tags" id="project-stack"></div>
           </div>
           <div class="widget-cta">
-            <a href="#" id="project-link" target="_blank">View Project -></a>
+            <a href="#" id="project-link" target="_blank" rel="noreferrer noopener" data-i18n="widget_project_link">View Project -></a>
           </div>
         </div>
 
         <div class="widget widget-hidden" id="widget-education-detail">
-          <div class="widget-title">Education Detail</div>
+          <div class="widget-title" data-i18n="widget_education_detail_title">Education Detail</div>
           <div class="widget-summary" id="edu-school"></div>
           <div class="widget-body">
             <p id="edu-major"></p>
@@ -415,7 +422,7 @@
         </div>
 
         <div class="widget widget-hidden" id="widget-internship-detail">
-          <div class="widget-title">Internship Detail</div>
+          <div class="widget-title" data-i18n="widget_internship_detail_title">Internship Detail</div>
           <div class="widget-summary" id="intern-company"></div>
           <div class="widget-body">
             <p id="intern-role"></p>
@@ -425,7 +432,7 @@
         </div>
 
         <div class="widget widget-hidden" id="widget-interest-detail">
-          <div class="widget-title">Interest Detail</div>
+          <div class="widget-title" data-i18n="widget_interest_detail_title">Interest Detail</div>
           <div class="widget-summary" id="interest-name"></div>
           <div class="widget-body">
             <p id="interest-desc"></p>
@@ -442,7 +449,8 @@
 
   </div>
 
-  <script src="assets/js/main.js?v=1"></script>
+  <script src="assets/js/i18n.js?v=4"></script>
+  <script src="assets/js/main.js?v=2"></script>
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>

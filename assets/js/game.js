@@ -21,6 +21,10 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    if (window.SiteI18n) {
+        window.SiteI18n.init();
+    }
+
     // ==========================================
     // Smooth Horizontal Scrolling (with inertia)
     // ==========================================
@@ -185,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     hoverElements.forEach(el => {
         el.addEventListener('mouseenter', function () {
-            const title = this.dataset.popupTitle || "💡 点击进入";
+            const title = this.dataset.popupTitle || (localStorage.getItem('lang') === 'en' ? "💡 Open" : "💡 点击进入");
             const desc = this.dataset.popupDesc;
             if (!desc) return; // Only show if there's a description
 

@@ -5,12 +5,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>我与学术</title>
+    <link rel="icon" href="../assets/images/main/avatar.jpg" type="image/jpeg">
     <link rel="stylesheet" href="../assets/css/main.css?v=3">
 </head>
 
 <body>
     <div class="wrap">
         <header>
+            <button id="lang-toggle" class="lang-toggle" title="Switch Language">EN</button>
             <button id="theme-toggle" class="theme-toggle" title="Toggle Theme">☀️</button>
             <h1>Academic</h1>
         </header>
@@ -33,6 +35,7 @@
             © <span id="y"></span> Kaixin Fan
         </footer>
     </div>
+    <script src="../assets/js/i18n.js?v=4"></script>
     <script src="../assets/js/main.js"></script>
     <script>
         document.getElementById("y").textContent = new Date().getFullYear();
