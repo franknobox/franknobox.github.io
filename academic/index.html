@@ -15,18 +15,119 @@
             <button id="lang-toggle" class="lang-toggle" title="Switch Language">EN</button>
             <button id="theme-toggle" class="theme-toggle" title="Toggle Theme">☀️</button>
             <h1>Academic</h1>
+            <!-- RP Download Link -->
+            <div class="rp-download-container">
+                <span class="rp-download-label">📄 我的研究计划 (Research Proposal)</span>
+                <a href="#" target="_blank" class="rp-download-link" title="下载研究计划">
+                    <svg class="icon-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                </a>
+            </div>
         </header>
 
         <div class="main-container">
             <aside class="sidebar">
                 <nav>
                     <a href="../index.html">← 返回主页 Home</a>
+                    <a href="#interests">研究兴趣 Interests</a>
+                    <a href="#experience">研究经历 Experience</a>
+                    <a href="#reading">文献研读 Reading List</a>
+                    <a href="#coursework">修读课程 Coursework</a>
                 </nav>
             </aside>
             <main class="content">
-                <section>
-                    <h2>Academic</h2>
-                    <p>Coming soon...</p>
+                <!-- Research Interests -->
+                <section id="interests">
+                    <h2>研究兴趣 Research Interests</h2>
+                    <div class="interests-grid">
+                        <!-- Card 1 -->
+                        <div class="interest-card">
+                            <div class="interest-icon">💡</div>
+                            <h3 class="interest-title">研究兴趣占位 1 / Research Interest 1</h3>
+                            <p class="interest-desc">这里是研究方向的简要描述与关注主题占位符。可以概括您在该学术领域关注的核心问题。</p>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="interest-card">
+                            <div class="interest-icon">💡</div>
+                            <h3 class="interest-title">研究兴趣占位 2 / Research Interest 2</h3>
+                            <p class="interest-desc">这里是研究方向的简要描述与关注主题占位符。可以概括您在该学术领域关注的核心问题。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Research Experience -->
+                <section id="experience">
+                    <h2>研究经历 Research Experience</h2>
+                    <div class="experience-list">
+                        <div class="exp-item">
+                            <div class="exp-header">
+                                <div class="exp-title-row">
+                                    <h3 class="exp-role">角色名称占位 / Role Placeholder</h3>
+                                    <span class="exp-date">20XX.XX - 至今</span>
+                                </div>
+                                <div class="exp-org-row">
+                                    <span class="exp-org">机构/课题组名称占位 Institution/Lab</span>
+                                    <span class="exp-project">科研项目名称占位 Project Name</span>
+                                </div>
+                            </div>
+                            <ul class="exp-bullets">
+                                <li>这里是科研经历中的具体工作内容、研究方法或技术成果的第一条占位描述。</li>
+                                <li>这里是科研经历中的具体工作内容、研究方法或技术成果的第二条占位描述。</li>
+                                <li>这里是科研经历中的具体工作内容、研究方法或技术成果的第三条占位描述。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Reading List -->
+                <section id="reading">
+                    <h2>文献研读 Reading List</h2>
+                    <div class="paper-list">
+                        <!-- Paper 1 -->
+                        <a class="paper-item" href="#" target="_blank">
+                            <h4 class="paper-item-name">文献名称占位 / Paper Title Placeholder 1</h4>
+                            <p class="paper-item-author">第一作者, 第二作者 / Authors Placeholder</p>
+                            <p class="paper-item-desc">这里是文献的简要介绍与研究贡献占位符。主要总结这篇论文的核心方法论和研究结论。</p>
+                        </a>
+                        <!-- Paper 2 -->
+                        <a class="paper-item" href="#" target="_blank">
+                            <h4 class="paper-item-name">文献名称占位 / Paper Title Placeholder 2</h4>
+                            <p class="paper-item-author">第一作者, 第二作者 / Authors Placeholder</p>
+                            <p class="paper-item-desc">这里是文献的简要介绍与研究贡献占位符。主要总结这篇论文的核心方法论和研究结论。</p>
+                        </a>
+                        <!-- Paper 3 -->
+                        <a class="paper-item" href="#" target="_blank">
+                            <h4 class="paper-item-name">文献名称占位 / Paper Title Placeholder 3</h4>
+                            <p class="paper-item-author">第一作者, 第二作者 / Authors Placeholder</p>
+                            <p class="paper-item-desc">这里是文献的简要介绍与研究贡献占位符。主要总结这篇论文的核心方法论和研究结论。</p>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Selected Coursework -->
+                <section id="coursework">
+                    <h2>修读课程 Selected Coursework</h2>
+                    <div class="course-grid">
+                        <div class="course-category">
+                            <h3 class="category-title">学科分类 1 / Category 1</h3>
+                            <div class="course-tags">
+                                <span class="course-tag">专业课程占位 1 / Course 1</span>
+                                <span class="course-tag">专业课程占位 2 / Course 2</span>
+                                <span class="course-tag">专业课程占位 3 / Course 3</span>
+                            </div>
+                        </div>
+                        <div class="course-category">
+                            <h3 class="category-title">学科分类 2 / Category 2</h3>
+                            <div class="course-tags">
+                                <span class="course-tag">专业课程占位 1 / Course 1</span>
+                                <span class="course-tag">专业课程占位 2 / Course 2</span>
+                                <span class="course-tag">专业课程占位 3 / Course 3</span>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </main>
         </div>

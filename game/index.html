@@ -90,20 +90,18 @@
                     <!-- Horizontal Tabs Gallery -->
                     <div class="game-tabs-container">
                         <!-- Tab 1 -->
-                        <div class="game-tab" data-target="game-1" data-color="rgba(100, 100, 255, 0.3)">
-                            <!-- 【替换处：游戏上方横排小封面图 (建议尺寸 800x450，比例 16:9)】 -->
-                            <img src="../assets/images/game/dotArsenal.png"
-                                alt="Dot Arsenal Cover">
+                        <div class="game-tab" data-target="game-1" data-color="rgba(251, 146, 60, 0.3)">
+                            <img src="../assets/images/game/road.png"
+                                alt="Project: Road Cover">
                             <div class="game-tab-meta">
-                                <h4>点阵武装 Dot Arsenal</h4>
-                                <span class="game-tab-type">2D Roguelite</span>
-                                <span class="game-tab-context">个人独立开发项目 (2025)</span>
+                                <h4>Project: Road</h4>
+                                <span class="game-tab-type">Survival Adventure</span>
+                                <span class="game-tab-context">首届腾讯光子游戏大赛 参赛作品</span>
                             </div>
                         </div>
 
                         <!-- Tab 2 -->
                         <div class="game-tab" data-target="game-2" data-color="rgba(74, 222, 128, 0.3)">
-                            <!-- 【替换处：游戏上方横排小封面图 (建议尺寸 800x450，比例 16:9)】 -->
                             <img src="../assets/images/game/dotlife.jpg"
                                 alt="GameJam Cover">
                             <div class="game-tab-meta">
@@ -114,8 +112,18 @@
                         </div>
 
                         <!-- Tab 3 -->
-                        <div class="game-tab" data-target="game-3" data-color="rgba(217, 70, 239, 0.3)">
-                            <!-- 【替换处：游戏上方横排小封面图 (建议尺寸 800x450，比例 16:9)】 -->
+                        <div class="game-tab" data-target="game-3" data-color="rgba(100, 100, 255, 0.3)">
+                            <img src="../assets/images/game/dotArsenal.png"
+                                alt="Dot Arsenal Cover">
+                            <div class="game-tab-meta">
+                                <h4>点阵武装 Dot Arsenal</h4>
+                                <span class="game-tab-type">2D Roguelite</span>
+                                <span class="game-tab-context">个人独立开发项目 (2025)</span>
+                            </div>
+                        </div>
+
+                        <!-- Tab 4 -->
+                        <div class="game-tab" data-target="game-4" data-color="rgba(217, 70, 239, 0.3)">
                             <img src="../assets/images/game/mask.png"
                                 alt="Project 3 Cover">
                             <div class="game-tab-meta">
@@ -125,9 +133,8 @@
                             </div>
                         </div>
 
-                        <!-- Tab 4 -->
-                        <div class="game-tab" data-target="game-4" data-color="rgba(251, 146, 60, 0.3)">
-                            <!-- 【替换处：游戏上方横排小封面图 (建议尺寸 800x450，比例 16:9)】 -->
+                        <!-- Tab 5 -->
+                        <div class="game-tab" data-target="game-5" data-color="rgba(251, 146, 60, 0.3)">
                             <img src="../assets/images/game/flashmemory.png"
                                 alt="Project 4 Cover">
                             <div class="game-tab-meta">
@@ -143,12 +150,75 @@
                         <!-- Game Card 1 -->
                         <div class="game-card" id="game-1">
                             <div class="game-card-gallery">
-                                <!-- 【替换处：大卡片顶部主展示图 (建议尺寸 800x450，比例 16:9)】 -->
+                                <img class="game-card-main-img"
+                                    src="../assets/images/game/road.png"
+                                    alt="Game Screenshot">
+                                <div class="game-card-thumbs">
+                                    <img class="game-card-thumb" src="../assets/images/game/road.png"
+                                        data-full="../assets/images/game/road.png"
+                                        alt="Thumb 1">
+                                </div>
+                            </div>
+                            <div class="game-card-info">
+                                <h3>Project: Road</h3>
+                                <p>这是一款 low-poly 风格的公路生存冒险游戏。玩家将驾驶房车在无尽的公路上行驶，邂逅随机的 AI 事件，收集资源，并探索特殊地图。</p>
+                                <div class="game-card-tags">
+                                    <span>Unity</span>
+                                    <span>C#</span>
+                                    <span>Low-poly</span>
+                                    <span>Survival Adventure</span>
+                                </div>
+                                <div class="game-card-links">
+                                    <a href="#" target="_blank">🔗 GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Game Card 2 -->
+                        <div class="game-card" id="game-2">
+                            <div class="game-card-gallery">
+                                <img class="game-card-main-img"
+                                    src="../assets/images/game/dotlife2.jpg"
+                                    alt="Game Screenshot">
+                                <div class="game-card-thumbs">
+                                    <img class="game-card-thumb" src="../assets/images/game/dotlife2.jpg"
+                                        data-full="../assets/images/game/dotlife2.jpg"
+                                        alt="Thumb 1">
+                                    <img class="game-card-thumb" src="../assets/images/game/dotlife3.png"
+                                        data-full="../assets/images/game/dotlife3.png"
+                                        alt="Thumb 2">
+                                    <img class="game-card-thumb" src="../assets/images/game/dotlife4.png"
+                                        data-full="../assets/images/game/dotlife4.png"
+                                        alt="Thumb 3">
+                                </div>
+                            </div>
+                            <div class="game-card-info">
+                                <h3>生活需要点缀 Dot Life</h3>
+                                <p>3D 益智解谜游戏，核心系统包括：</p>
+                                <ul>
+                                    <li><strong>空间绘图交互</strong>：将传统 UI 绘图转化为 3D 空间内的物理位移交互。玩家需在场景中寻找并按逻辑激活，模拟在场景中绘图的感官体验。开发了序列校验状态机，进行实时路径校验；配合分帧材质动画系统，随交互进程动态映射纹理演变，提供即时的“色彩重现”视觉反馈。</li>
+                                    <li><strong>平滑的3D 3C系统设计</strong>：实现了具备指令预缓冲逻辑的网格化移动系统，支持指令链式触发，确保操作的连贯性；同步构建了带滞后效果的平滑跟随镜头，结合电影化视角切换，提升整体操作感与演出效果。</li>
+                                    <li><strong>室内桌面场景搭建与环境叙事</strong>：以“书桌”缩微世界为视角核心，运用Low-poly 风格资源构建微粒化的室内关卡，通过合理的文具与日常物件布局引导探索路径，将游戏主题与环境结构深度融合，实现高沉浸的视觉叙事。</li>
+                                    <li><strong>解耦式事件驱动架构</strong>：建立全局 TriggerBus，解耦了玩家控制、环境交互与任务进度逻辑。通过观察者模式实现复杂场景下多个“点位”触发器与全局 GameState 的低耦合协作，提升 GameJam 高质量迭代的稳定性。</li>
+                                </ul>
+                                <div class="game-card-tags">
+                                    <span>Unity</span>
+                                    <span>C#</span>
+                                    <span>GameJam</span>
+                                </div>
+                                <div class="game-card-links">
+                                    <a href="#" target="_blank">🔗 GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Game Card 3 -->
+                        <div class="game-card" id="game-3">
+                            <div class="game-card-gallery">
                                 <img class="game-card-main-img"
                                     src="https://placehold.co/800x450/1a1a2e/e0e0e0?text=Game+Screenshot+1"
                                     alt="Game Screenshot">
                                 <div class="game-card-thumbs">
-                                    <!-- 【替换处：大卡片附带的缩略图 (src 为小图尺寸，data-full 为点击后主图显示的大图路径)】 -->
                                     <img class="game-card-thumb" src="https://placehold.co/128x80/1a1a2e/e0e0e0?text=1"
                                         data-full="https://placehold.co/800x450/1a1a2e/e0e0e0?text=Game+Screenshot+1"
                                         alt="Thumb 1">
@@ -193,52 +263,13 @@
                             </div>
                         </div>
 
-                        <!-- Game Card 2 (placeholder) -->
-                        <div class="game-card" id="game-2">
+                        <!-- Game Card 4 -->
+                        <div class="game-card" id="game-4">
                             <div class="game-card-gallery">
-                                <!-- 【替换处：大卡片顶部主展示图 (建议尺寸 800x450，比例 16:9)】 -->
-                                <img class="game-card-main-img"
-                                    src="https://placehold.co/800x450/1e3a2e/e0e0e0?text=GameJam+Project"
-                                    alt="Game Screenshot">
-                                <div class="game-card-thumbs">
-                                    <!-- 【替换处：大卡片附带的缩略图 (src 为小图尺寸，data-full 为点击后主图显示的大图路径)】 -->
-                                    <img class="game-card-thumb" src="https://placehold.co/128x80/1e3a2e/e0e0e0?text=1"
-                                        data-full="https://placehold.co/800x450/1e3a2e/e0e0e0?text=GameJam+Screenshot+1"
-                                        alt="Thumb 1">
-                                    <img class="game-card-thumb" src="https://placehold.co/128x80/2e3a1e/e0e0e0?text=2"
-                                        data-full="https://placehold.co/800x450/2e3a1e/e0e0e0?text=GameJam+Screenshot+2"
-                                        alt="Thumb 2">
-                                </div>
-                            </div>
-                            <div class="game-card-info">
-                                <h3>Global GameJam 2026 作品（占位）</h3>
-                                <p>3D 益智解谜游戏，核心系统包括：</p>
-                                <ul>
-                                    <li><strong>空间绘图交互</strong>：将传统 UI 绘图转化为 3D 空间内的物理位移交互。玩家需在场景中寻找并按逻辑激活，模拟在场景中绘图的感官体验。开发了序列校验状态机，进行实时路径校验；配合分帧材质动画系统，随交互进程动态映射纹理演变，提供即时的“色彩重现”视觉反馈。</li>
-                                    <li><strong>平滑的3D 3C系统设计</strong>：实现了具备指令预缓冲逻辑的网格化移动系统，支持指令链式触发，确保操作的连贯性；同步构建了带滞后效果的平滑跟随镜头，结合电影化视角切换，提升整体操作感与演出效果。</li>
-                                    <li><strong>室内桌面场景搭建与环境叙事</strong>：以“书桌”缩微世界为视角核心，运用Low-poly 风格资源构建微粒化的室内关卡，通过合理的文具与日常物件布局引导探索路径，将游戏主题与环境结构深度融合，实现高沉浸的视觉叙事。</li>
-                                    <li><strong>解耦式事件驱动架构</strong>：建立全局 TriggerBus，解耦了玩家控制、环境交互与任务进度逻辑。通过观察者模式实现复杂场景下多个“点位”触发器与全局 GameState 的低耦合协作，提升 GameJam 高质量迭代的稳定性。</li>
-                                </ul>
-                                <div class="game-card-tags">
-                                    <span>Unity</span>
-                                    <span>C#</span>
-                                    <span>GameJam</span>
-                                </div>
-                                <div class="game-card-links">
-                                    <a href="#" target="_blank">🔗 GitHub</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Game Card 3 (placeholder) -->
-                        <div class="game-card" id="game-3">
-                            <div class="game-card-gallery">
-                                <!-- 【替换处：大卡片顶部主展示图 (建议尺寸 800x450，比例 16:9)】 -->
                                 <img class="game-card-main-img"
                                     src="https://placehold.co/800x450/2a1a3e/e0e0e0?text=Project+3"
                                     alt="Game Screenshot">
                                 <div class="game-card-thumbs">
-                                    <!-- 【替换处：大卡片附带的缩略图 (src 为小图尺寸，data-full 为点击后主图显示的大图路径)】 -->
                                     <img class="game-card-thumb" src="https://placehold.co/128x80/2a1a3e/e0e0e0?text=1"
                                         data-full="https://placehold.co/800x450/2a1a3e/e0e0e0?text=Project+3+Screenshot+1"
                                         alt="Thumb 1">
@@ -260,23 +291,21 @@
                             </div>
                         </div>
 
-                        <!-- Game Card 4 (placeholder) -->
-                        <div class="game-card" id="game-4">
+                        <!-- Game Card 5 -->
+                        <div class="game-card" id="game-5">
                             <div class="game-card-gallery">
-                                <!-- 【替换处：大卡片顶部主展示图 (建议尺寸 800x450，比例 16:9)】 -->
                                 <img class="game-card-main-img"
-                                    src="https://placehold.co/800x450/3e2a1a/e0e0e0?text=Project+4"
+                                    src="../assets/images/game/flashmemory.png"
                                     alt="Game Screenshot">
                                 <div class="game-card-thumbs">
-                                    <!-- 【替换处：大卡片附带的缩略图 (src 为小图尺寸，data-full 为点击后主图显示的大图路径)】 -->
-                                    <img class="game-card-thumb" src="https://placehold.co/128x80/3e2a1a/e0e0e0?text=1"
-                                        data-full="https://placehold.co/800x450/3e2a1a/e0e0e0?text=Project+4+Screenshot+1"
+                                    <img class="game-card-thumb" src="../assets/images/game/flashmemory.png"
+                                        data-full="../assets/images/game/flashmemory.png"
                                         alt="Thumb 1">
                                 </div>
                             </div>
                             <div class="game-card-info">
-                                <h3>游戏项目占位 4 详细说明</h3>
-                                <p>这里是第四个游戏项目的详细描述占位符。</p>
+                                <h3>闪忆 Flash Memory</h3>
+                                <p>我的第一款游戏，是一款 2D 横版叙事解谜游戏。讲述了一位失忆女孩带着相机回到空无一人的校园的故事。</p>
                                 <div class="game-card-tags">
                                     <span>Godot</span>
                                     <span>GDScript</span>

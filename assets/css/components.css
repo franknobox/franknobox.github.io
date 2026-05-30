@@ -272,6 +272,7 @@ footer {
 
 .widget-body p {
   margin-bottom: 12px;
+  white-space: pre-wrap;
 }
 
 #widget-status .widget-body {

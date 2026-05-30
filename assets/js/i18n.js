@@ -19,13 +19,15 @@ window.SiteI18n = (() => {
             sidebar_contact: "联系我 Contact",
             // 主页 - 关于我
             about_title: "关于我 About me",
-            about_p1: "我是来自<a href=\"https://www.szu.edu.cn/\" target=\"_blank\" rel=\"noreferrer noopener\">深圳大学</a>管理学院的一名本科生。目前关注的方向包括游戏开发、VR/XR交互应用、AI Agent以及Vibe coding相关领域。我对AI智能体的设计、工作流构建，以及将AI应用于人机交互设计、内容生产与产品场景具有浓厚兴趣。",
+            about_p1: "我是来自<a href=\"https://www.szu.edu.cn/\" target=\"_blank\" rel=\"noreferrer noopener\">深圳大学</a>管理学院的一名本科生，辅修人工智能、心理学相关课程。目前关注的方向包括游戏开发、VR/XR交互应用、AI Agent以及Vibe coding相关领域。我对AI智能体的设计、工作流构建，以及将AI应用于人机交互设计、内容生产与产品场景具有浓厚兴趣。",
             about_p2: "25年6月至9月，我在<a href=\"https://www.hkust-gz.edu.cn/\" target=\"_blank\" rel=\"noreferrer noopener\">香港科技大学(广州)</a>作为访问学生修读暑期课程。25年12月至26年3月，我在<a href=\"https://atoms.dev/\" target=\"_blank\" rel=\"noreferrer noopener\">Atoms</a>实习。26年4月起，我在深圳<a href=\"https://www.q1.com/\" target=\"_blank\" rel=\"noreferrer noopener\">冰川网络</a>3D引擎部，作为游戏技术策划实习生。",
             about_p3: "我正在积极寻求 2027 fall 的 Mphil 项目机会以及27年应届的实习机会，若有意进一步交流，请联系我！",
             // 主页 - 最近动态
             news_title: "最近 News",
             news_more: "more",
             news_less: "less",
+            news_2026_5_lightspeed: "参加首届腾讯光子游戏大赛。",
+            news_2026_5_lightspeed_content: "参加首届腾讯光子游戏大赛。",
             news_2026_4_glacier: "加入深圳市冰川网络实习。",
             news_2026_4_glacier_content: "加入深圳市冰川网络实习。",
             news_2026_4_vret: "参与深大李鹏教授课题组，关于虚拟现实暴露疗法(VRET)的科研项目。",
@@ -72,7 +74,7 @@ window.SiteI18n = (() => {
             intern_glacier_data_company: "冰川网络",
             intern_glacier_data_role: "技术策划实习生 Technical Designer Intern",
             intern_glacier_data_time: "2026.4 - NOW",
-            intern_glacier_data_desc: "------",
+            intern_glacier_data_desc: "在制作人指导下参与游戏项目开发，协作完成关卡/玩法的简易demo；\n开发地图生成器、修改器、检测器等编辑器工具；\n学习并拆解相关游戏产品的关卡/系统，撰写拆解报告；承接需求，作为策划与程序/TA间的桥梁。",
             intern_atoms_name: "Deepwisdom",
             intern_atoms_role: "Intern | 2025.12 - 2026.3",
             intern_atoms_desc: "“Atoms 是一个可以让你‘用一句话启动一家创业公司’的平台。”<br>你只需要有一个想法，输入给 Atoms，它就会召唤出一个智能体团队——包括产品经理、架构师、工程师、测试、数据分析师等——帮你调研、设计、开发、部署一个完整的产品。",
@@ -117,6 +119,7 @@ window.SiteI18n = (() => {
             interest_music_desc: "喜欢听很多类型的音乐。",
             // 主页 - 联系我
             contact_title: "联系我 Contact me",
+            figma_portfolio: "Figma 作品集 <span style=\"font-family: monospace;\">&rarr;</span>",
             // 主页右侧组件 - 技术栈分类
             cat_programming: "编程语言",
             cat_gamedev: "游戏开发",
@@ -188,13 +191,15 @@ window.SiteI18n = (() => {
             sidebar_contact: "Contact",
             // 主页 - 关于我
             about_title: "About me",
-            about_p1: "I am an undergraduate student at the <a href=\"https://www.szu.edu.cn/\" target=\"_blank\" rel=\"noreferrer noopener\">Shenzhen University</a> School of Management. My current interests include game development, VR/XR interactive applications, AI Agents, and Vibe coding. I have a strong interest in AI agent design, workflow construction, and applying AI to human-computer interaction design, content production, and product scenarios.",
+            about_p1: "I am an undergraduate student at the <a href=\"https://www.szu.edu.cn/\" target=\"_blank\" rel=\"noreferrer noopener\">Shenzhen University</a> School of Management, minoring in artificial intelligence and psychology related courses. My current interests include game development, VR/XR interactive applications, AI Agents, and Vibe coding. I have a strong interest in AI agent design, workflow construction, and applying AI to human-computer interaction design, content production, and product scenarios.",
             about_p2: "From June to September 2025, I studied as a visiting student at <a href=\"https://www.hkust-gz.edu.cn/\" target=\"_blank\" rel=\"noreferrer noopener\">HKUST(GZ)</a>. From December 2025 to March 2026, I interned at <a href=\"https://atoms.dev/\" target=\"_blank\" rel=\"noreferrer noopener\">Atoms</a>. Since April 2026, I have been a Game Technical Design Intern in the 3D Engine Department at <a href=\"https://www.q1.com/\" target=\"_blank\" rel=\"noreferrer noopener\">Q1 Network</a> (Shenzhen).",
             about_p3: "I am actively seeking MPhil opportunities for Fall 2027 and internship opportunities for the class of 2027. Please contact me if you are interested in further discussion!",
             // 主页 - 最近动态
             news_title: "News",
             news_more: "more",
             news_less: "less",
+            news_2026_5_lightspeed: "Participated in the 1st Tencent LightSpeed Game Competition.",
+            news_2026_5_lightspeed_content: "Participated in the 1st Tencent LightSpeed Game Competition.",
             news_2026_4_glacier: "Joined Q1 Network (Shenzhen) as an intern.",
             news_2026_4_glacier_content: "Joined Q1 Network (Shenzhen) as an intern.",
             news_2026_4_vret: "Participated in Prof. Li Peng's research group at SZU on Virtual Reality Exposure Therapy (VRET).",
@@ -241,7 +246,7 @@ window.SiteI18n = (() => {
             intern_glacier_data_company: "Q1 Network",
             intern_glacier_data_role: "Technical Designer Intern",
             intern_glacier_data_time: "2026.4 - Present",
-            intern_glacier_data_desc: "------",
+            intern_glacier_data_desc: "Under the guidance of the producer, participated in game project development and collaborated to complete simple level/gameplay demos;\nDeveloped editor tools such as map generators, modifiers, and checkers;\nStudied and analyzed levels/systems of related game products, and wrote teardown reports; bridged requirements between designers, programmers, and Technical Artists (TA).",
             intern_atoms_name: "Deepwisdom",
             intern_atoms_role: "Intern | 2025.12 - 2026.3",
             intern_atoms_desc: "\"Atoms is a platform that lets you 'launch a startup with one sentence'.\"<br>You just need an idea. Input it to Atoms, and it will summon an agent team — including product managers, architects, engineers, testers, data analysts, etc. — to help you research, design, develop, and deploy a complete product.",
@@ -286,6 +291,7 @@ window.SiteI18n = (() => {
             interest_music_desc: "Enjoy listening to various types of music.",
             // 主页 - 联系我
             contact_title: "Contact me",
+            figma_portfolio: "Figma Portfolio <span style=\"font-family: monospace;\">&rarr;</span>",
             // 主页右侧组件 - 技术栈分类
             cat_programming: "Programming Languages",
             cat_gamedev: "Game Development",
@@ -356,7 +362,37 @@ window.SiteI18n = (() => {
                 // 学术页面 - 占位页
                 "\u6211\u4e0e\u5b66\u672f": "Academic & Me",
                 "\u2190 \u8fd4\u56de\u4e3b\u9875 Home": "\u2190 Home",
-                "Coming soon...": "Coming soon..."
+                "Coming soon...": "Coming soon...",
+                "📄 我的研究计划 (Research Proposal)": "📄 My Research Proposal (RP)",
+                "研究兴趣 Research Interests": "Research Interests",
+                "研究经历 Research Experience": "Research Experience",
+                "文献研读 Reading List": "Reading List",
+                "修读课程 Selected Coursework": "Selected Coursework",
+                "研究兴趣 Interests": "Interests",
+                "研究经历 Experience": "Experience",
+                "文献研读 Reading List": "Reading List",
+                "修读课程 Coursework": "Coursework",
+
+                // Research Interests Details
+                "研究兴趣占位 1 / Research Interest 1": "Research Interest 1 (Placeholder)",
+                "研究兴趣占位 2 / Research Interest 2": "Research Interest 2 (Placeholder)",
+                "这里是研究方向的简要描述与关注主题占位符。可以概括您在该学术领域关注的核心问题。": "This is a placeholder description for your research area. You can summarize the core questions you focus on in this academic field.",
+
+                // Research Experience Details
+                "角色名称占位 / Role Placeholder": "Role Placeholder",
+                "20XX.XX - 至今": "20XX.XX - Present",
+                "机构/课题组名称占位 Institution/Lab": "Institution/Lab Placeholder",
+                "科研项目名称占位 Project Name": "Project Name Placeholder",
+                "这里是科研经历中的具体工作内容、研究方法或技术成果的第一条占位描述。": "This is the first placeholder bullet point describing your detailed contributions or responsibilities.",
+                "这里是科研经历中的具体工作内容、研究方法或技术成果的第二条占位描述。": "This is the second placeholder bullet point describing your detailed contributions or responsibilities.",
+                "这里是科研经历中的具体工作内容、研究方法或技术成果的第三条占位描述。": "This is the third placeholder bullet point describing your detailed contributions or responsibilities.",
+
+                // Selected Coursework Details
+                "学科分类 1 / Category 1": "Course Category 1",
+                "学科分类 2 / Category 2": "Course Category 2",
+                "专业课程占位 1 / Course 1": "Course Placeholder 1",
+                "专业课程占位 2 / Course 2": "Course Placeholder 2",
+                "专业课程占位 3 / Course 3": "Course Placeholder 3"
             }
         },
         ai: { en: {} },
@@ -369,6 +405,11 @@ window.SiteI18n = (() => {
     // key 是中文模式原始属性值，value 是英文
     // ============================================================
     const exactAttrMaps = {
+        academic: {
+            en: {
+                "下载研究计划": "Download Research Proposal"
+            }
+        },
         ai: { en: {} },
         game: { en: {} }
     };
@@ -593,6 +634,7 @@ window.SiteI18n = (() => {
         "生活需要点缀 Dot Life": "Dot Life",
         "3D益智解谜": "3D Puzzle",
         "萌芽GameJam 参赛作品": "Sprout GameJam Entry",
+        "首届腾讯光子游戏大赛 参赛作品": "1st Tencent LightSpeed Game Competition Entry",
         "爷爷的面具去哪了": "Where Did Grandpa's Mask Go?",
         "2D能力锁轻战斗闯关": "2D ability-gated light combat platformer",
         "2026 GGJ 作品": "2026 GGJ Entry",
@@ -611,8 +653,8 @@ window.SiteI18n = (() => {
         "室内桌面场景搭建与环境叙事": "Indoor Desktop Scene Building and Environmental Storytelling",
         "解耦式事件驱动架构": "Decoupled Event-driven Architecture",
         "这里是第三个游戏项目的详细描述占位符。": "Placeholder description for the third game project.",
-        "游戏项目占位 4 详细说明": "Game Project Placeholder 4 Details",
-        "这里是第四个游戏项目的详细描述占位符。": "Placeholder description for the fourth game project.",
+        "我的第一款游戏，是一款 2D 横版叙事解谜游戏。讲述了一位失忆女孩带着相机回到空无一人的校园的故事。": "My first game is a 2D side-scrolling narrative puzzle game. An amnesiac girl who returns to an empty campus with a camera.",
+        "这是一款 low-poly 风格的公路生存冒险游戏。玩家将驾驶房车在无尽的公路上行驶，邂逅随机的 AI 事件，收集资源，并探索特殊地图。": "This is a low-poly road survival adventure game where players drive an RV on an endless highway, encounter random AI events, gather resources, and explore special maps.",
         // 游戏页面 - 拆解与感想书架
         "《崩坏：星穹铁道》战斗数值分析": "Honkai: Star Rail Combat Numbers Analysis",
         "拆解案 · 2026": "Analysis · 2026",

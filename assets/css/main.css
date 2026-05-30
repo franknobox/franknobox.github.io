@@ -12,3 +12,4 @@
 @import url('components.css'); /* 通用UI组件（按钮、弹窗、二级标题、内容列表样式等） */
 @import url('ai.css');         /* AI页面专属（折叠工具箱、时间线、阅读书架等） */
 @import url('game.css');       /* 游戏页面专属（游戏展示卡片切换、游戏档案数据展示等） */
+@import url('academic.css');   /* 学术页面专属（文献横向列表等） */
