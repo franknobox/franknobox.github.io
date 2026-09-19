@@ -21,7 +21,7 @@ window.SiteI18n = (() => {
             about_title: "关于我 About me",
             about_p1: "我是来自<a href=\"https://www.szu.edu.cn/\" target=\"_blank\" rel=\"noreferrer noopener\">深圳大学</a>管理学院的一名本科生，辅修人工智能、心理学相关课程。目前关注的方向包括游戏开发、数字媒体、VR/XR交互应用、以及AI智能体相关领域。我对游戏设计，数字媒体艺术以及将AI应用于人机交互、内容生产与产品场景具有浓厚兴趣。",
             about_p2: "25年6月至9月，我在<a href=\"https://www.hkust-gz.edu.cn/\" target=\"_blank\" rel=\"noreferrer noopener\">香港科技大学(广州)</a>作为访问学生修读暑期课程。25年12月至26年3月，我在<a href=\"https://atoms.dev/\" target=\"_blank\" rel=\"noreferrer noopener\">Atoms</a>实习。26年4月至6月，我在深圳<a href=\"https://www.q1.com/\" target=\"_blank\" rel=\"noreferrer noopener\">冰川网络</a>3D引擎部，作为游戏技术策划实习生。26年7月，我加入腾讯，作为游戏策划实习生。",
-            about_p3: "我正在积极寻求 2027 fall 的 Mphil 项目机会以及27年应届的实习机会，若有意进一步交流，请联系我！",
+            about_p3: "我正在寻找面向 2027 届的实习或校招正式岗位，欢迎联系交流。",
             // 主页 - 最近动态
             news_title: "最近 News",
             news_more: "more",
@@ -148,7 +148,7 @@ window.SiteI18n = (() => {
             alt_deepwisdom_logo: "Deepwisdom Logo",
             // 主页右侧组件 - 状态卡片
             widget_status_title: "Status",
-            widget_status_seeking: "✨ Looking for Summer Internship & Master's Programs",
+            widget_status_seeking: "✨ 寻找 2027 届实习或校招正式岗位",
             widget_status_location: "📍 Shenzhen, China",
             widget_status_cta: "Contact Me ->",
             // 主页右侧组件 - 技术栈卡片
@@ -201,7 +201,7 @@ window.SiteI18n = (() => {
             about_title: "About me",
             about_p1: "I am an undergraduate student at the <a href=\"https://www.szu.edu.cn/\" target=\"_blank\" rel=\"noreferrer noopener\">Shenzhen University</a> School of Management, minoring in artificial intelligence and psychology related courses. My current interests include game development, digital media, VR/XR interactive applications, and AI agent related fields. I have a strong interest in game design, digital media art, and applying AI to human-computer interaction, content production, and product scenarios.",
             about_p2: "From June to September 2025, I studied as a visiting student at <a href=\"https://www.hkust-gz.edu.cn/\" target=\"_blank\" rel=\"noreferrer noopener\">HKUST(GZ)</a>. From December 2025 to March 2026, I interned at <a href=\"https://atoms.dev/\" target=\"_blank\" rel=\"noreferrer noopener\">Atoms</a>. From April to June 2026, I was a Game Technical Design Intern in the 3D Engine Department at <a href=\"https://www.q1.com/\" target=\"_blank\" rel=\"noreferrer noopener\">Q1 Network</a> (Shenzhen). In July 2026, I joined Tencent as a Game Designer Intern.",
-            about_p3: "I am actively seeking MPhil opportunities for Fall 2027 and internship opportunities for the class of 2027. Please contact me if you are interested in further discussion!",
+            about_p3: "I am seeking internships or full-time graduate roles for the Class of 2027. Feel free to get in touch.",
             // 主页 - 最近动态
             news_title: "News",
             news_more: "more",
@@ -328,7 +328,7 @@ window.SiteI18n = (() => {
             alt_deepwisdom_logo: "Deepwisdom logo",
             // 主页右侧组件 - 状态卡片
             widget_status_title: "Status",
-            widget_status_seeking: "✨ Looking for Summer Internship & Master's Programs",
+            widget_status_seeking: "✨ Open to 2027 Internships & Graduate Roles",
             widget_status_location: "📍 Shenzhen, China",
             widget_status_cta: "Contact Me ->",
             // 主页右侧组件 - 技术栈卡片
